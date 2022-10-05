@@ -2,6 +2,6 @@ import './App.css';
 
 export const App = () => {
   return (
-    <div>リセット済</div>
+    <div className={`text-red-500`}>セット済</div>
   );
 }
