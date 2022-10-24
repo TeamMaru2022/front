@@ -272,9 +272,9 @@ const FloorMapMobile = (props) => {
         {floor === "37" && <ThirdTowerSevenFloor />}
       </div>
       <div className={`flex mb-10`}>
-        <div className={`h-[28px] w-[28px] bg-[#ff7f7f] ml-[60px]`}></div>
+        <div className={`h-[28px] w-[28px] bg-[#ffbfc8] ml-[60px]`}></div>
         <div className={`text-lg`}>・・・予約・授業</div>
-        <div className={`h-[28px] w-[28px] bg-[#ffea7f] ml-[20px]`}></div>
+        <div className={`h-[28px] w-[28px] bg-[#fff4bf] ml-[20px]`}></div>
         <div className={`text-lg`}>・・・利用中</div>
       </div>
       <div className={` mb-10 flex place-content-center text-center flex-col mx-10`}>
