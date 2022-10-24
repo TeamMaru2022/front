@@ -27,7 +27,7 @@ const SecondTowerFourFloor = () => {
             </div>
             <div
               id="2405"
-              className={`w-[120px] h-[130px] border-2 border-black mb-0.5 ml-0.5 px-2 py-[25px] bg-[#ff7f7f]`}
+              className={`w-[120px] h-[130px] border-2 border-black mb-0.5 ml-0.5 px-2 py-[25px] bg-[#ffbfc8]`}
             >
               <div>2405</div>
               <div>ノートPC</div>
@@ -46,7 +46,8 @@ const SecondTowerFourFloor = () => {
           </div>
           <div
             id="2401"
-            className={`w-[120px] h-[220px] border-2 border-black m-0.5 px-2 py-[80px] bg-[#ffea7f]`}
+            className={`w-[120px] h-[220px] border-2 border-black m-0.5 px-2 py-[80px] bg-[#fff4bf]`}
+
           >
             <div>2401</div>
             <div>実習室</div>
