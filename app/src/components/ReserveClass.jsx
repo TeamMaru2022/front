@@ -49,6 +49,21 @@ const ReserveClass = (props) => {
     setEndHour(e.target.value);
   };
 
+  let url = "http://localhost:4000/timetable/csv";
+
+  const TimetableChange = (e) => {
+    const formData = new FormData();
+    formData.append("timetable", e.target.files[0]);
+    const param = {
+      method: "POST",
+      body: formData
+    }
+    fetch(url, param)
+    .then((response) => response.json())
+    console.log(e.target.files[0]);
+    console.log(Object.keys(e.target.files[0]));
+  };
+
   const items = [];
   for (let i = 1; i <= roomnum[0].num; i++) {
     items.push(
@@ -191,6 +206,11 @@ const ReserveClass = (props) => {
             </div>
           </div>
         )}
+        {/* 時間割を変更 */}
+        {/* <input type="file" onChange={(e) => this.handleChangeFile(e)}/> */}
+        <input type="file" onChange={(props) => TimetableChange(props)} />
+
+        {/* <button onClick={() => uploadFile(this.props.dispatch, this.props.value.file)}>upload</button> */}
       </div>
     );
   }
