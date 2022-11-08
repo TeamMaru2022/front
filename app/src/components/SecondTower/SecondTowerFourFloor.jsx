@@ -8,7 +8,7 @@ const SecondTowerFourFloor = () => {
       <div className={`flex flex-row text-center`}>
         {/*  */}
         <div
-          className={`flex flex-row w-[280px] border-y-2 border-l-2 border-black`}
+          className={`flex flex-row w-[280px] border-y-2 border-l-2 border-gray-400 text-lg`}
         >
           <div className={`flex-col `}>
             <div
@@ -27,7 +27,7 @@ const SecondTowerFourFloor = () => {
             </div>
             <div
               id="2405"
-              className={`w-[120px] h-[130px] border-2 border-black mb-0.5 ml-0.5 px-2 py-[25px] bg-[#ffbfc8]`}
+              className={`w-[120px] h-[130px] border-2 border-black mb-0.5 ml-0.5 px-2 py-[20px]`}
             >
               <div>2405</div>
               <div>ノートPC</div>
@@ -46,7 +46,7 @@ const SecondTowerFourFloor = () => {
           </div>
           <div
             id="2401"
-            className={`w-[120px] h-[220px] border-2 border-black m-0.5 px-2 py-[80px] bg-[#fff4bf]`}
+            className={`w-[120px] h-[220px] border-2 border-black m-0.5 px-2 py-[80px]`}
 
           >
             <div>2401</div>
@@ -55,10 +55,10 @@ const SecondTowerFourFloor = () => {
         </div>
         <div className={`flex-col`}>
           <div
-            className={`w-[80px] h-[120px] border-l-2 border-b-2 border-black px-2`}
+            className={`w-[80px] h-[120px] border-l-2 border-b-2 border-gray-400 px-2`}
           ></div>
           <div
-            className={`w-[80px] h-[248px] border-r-2 border-b-2 border-black flex justify-between`}
+            className={`w-[80px] h-[248px] border-r-2 border-b-2 border-gray-400 flex justify-between`}
           >
             <div className={`w-[40px] h-[252px]`}>
               <img
@@ -69,22 +69,22 @@ const SecondTowerFourFloor = () => {
             </div>
             <div className={`w-[33px] flex-col mr-0.5`}>
               <div
-                className={`w-[33px] h-[51px] border-2 border-black mt-0.5 mr-0.5`}
+                className={`w-[33px] h-[51px] border-2 border-gray-500 text-gray-700 mt-0.5 mr-0.5`}
               >
                 WC (女)
               </div>
               <div
-                className={`w-[33px] h-[47px] border-x-2 border-black mr-0.5`}
+                className={`w-[33px] h-[47px] border-x-2 border-gray-500 text-gray-700 mr-0.5`}
               >
                 WC (男)
               </div>
               <div
-                className={`w-[33px] h-[29.5px] border-2 border-black mr-0.5`}
+                className={`w-[33px] h-[29.5px] border-2 border-gray-500 text-gray-700 mr-0.5`}
               >
                 EV
               </div>
               <div
-                className={`w-[33px] h-[115px] border-x-2 border-b-2 border-black mr-0.5 mb-0.5`}
+                className={`w-[33px] h-[115px] border-x-2 border-b-2 border-gray-500 text-gray-700 mr-0.5 mb-0.5`}
               ></div>
             </div>
           </div>
