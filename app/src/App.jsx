@@ -8,6 +8,7 @@ import SecondTower from "./pages/SecondTower";
 import ThirdTower from "./pages/ThirdTower";
 import Reserve from "./pages/Reserve";
 import Login from "./pages/Login";
+import ChangeTimetable from "./pages/ChangeTimetable";
 
 const App = () => {
   const isWide = useMedia({ minWidth: "1300px" });
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="third" element={<ThirdTower />} />
             <Route path="reserve" element={<Reserve />} />
             <Route path="login" element={<Login />} />
+            <Route path="timetable" element={<ChangeTimetable />} />
           </Routes>
         </div>
     </BrowserRouter>
