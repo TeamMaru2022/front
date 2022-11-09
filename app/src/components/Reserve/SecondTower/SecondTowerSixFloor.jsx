@@ -5,11 +5,16 @@ const SecondTowerSixFloor = () => {
 
   // 教室をクリックしたときのイベント
   const Set_room = (e) => {
+    var str = room
+    if (str.length !== 0) {
+      document.getElementById(str).style.backgroundColor = "#ffffff";
+    }
     var id;
     id = e.currentTarget.id;
     setRoom((room) => id);
+    document.getElementById(id).style.backgroundColor = "#7fe5ff";
   };
-
+  
   return (
     <>
       <div className={`flex place-content-center my-8 w-3/5`}>

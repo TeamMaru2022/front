@@ -5,9 +5,14 @@ const FirstTowerFourFloor = () => {
 
   // 教室をクリックしたときのイベント
   const Set_room = (e) => {
+    var str = room
+    if (str.length !== 0) {
+      document.getElementById(str).style.backgroundColor = "#ffffff";
+    }
     var id;
     id = e.currentTarget.id;
     setRoom((room) => id);
+    document.getElementById(id).style.backgroundColor = "#7fe5ff";
   };
 
   return (
@@ -21,7 +26,7 @@ const FirstTowerFourFloor = () => {
                   <div
                     onClick={Set_room}
                     id="1403"
-                    className={`h-[117px] border-2 border-black mx-0.5 mt-0.5 py-[15px] flex-col hover:bg-gray-200`}
+                    className={`h-[117px] border-2 border-black mx-0.5 mt-0.5 py-[15px] flex-col hover:bg-[#e5e7eb]`}
                   >
                     <div>1403</div>
                     <div>ノートPC</div>
@@ -30,7 +35,7 @@ const FirstTowerFourFloor = () => {
                   <div
                     onClick={Set_room}
                     id="1404"
-                    className={`h-[117px] border-x-2 border-black mx-0.5 py-[15px] flex-col hover:bg-gray-200`}
+                    className={`h-[117px] border-x-2 border-black mx-0.5 py-[15px] flex-col hover:bg-[#e5e7eb]`}
                   >
                     <div>1404</div>
                     <div>ノートPC</div>
@@ -39,7 +44,7 @@ const FirstTowerFourFloor = () => {
                   <div
                     onClick={Set_room}
                     id="1405"
-                    className={`h-[117px] border-2 border-black mx-0.5 mb-0.5 py-[15px] flex-col hover:bg-gray-200`}
+                    className={`h-[117px] border-2 border-black mx-0.5 mb-0.5 py-[15px] flex-col hover:bg-[#e5e7eb]`}
                   >
                     <div>1405</div>
                     <div>ノートPC</div>
@@ -50,14 +55,14 @@ const FirstTowerFourFloor = () => {
                   <div
                     onClick={Set_room}
                     id="1401"
-                    className={`h-[125px] mx-0.5 mt-0.5 border-x-2 border-t-2 border-black py-[45px] hover:bg-gray-200`}
+                    className={`h-[125px] mx-0.5 mt-0.5 border-x-2 border-t-2 border-black py-[45px] hover:bg-[#e5e7eb]`}
                   >
                     1401実習室
                   </div>
                   <div
                     onClick={Set_room}
                     id="1402"
-                    className={`h-[125px] mx-0.5 border-2 border-black py-[45px] hover:bg-gray-200`}
+                    className={`h-[125px] mx-0.5 border-2 border-black py-[45px] hover:bg-[#e5e7eb]`}
                   >
                     1402実習室
                   </div>

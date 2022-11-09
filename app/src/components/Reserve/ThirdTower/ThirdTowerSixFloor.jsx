@@ -5,9 +5,14 @@ const ThirdTowerSixFloor = () => {
 
   // 教室をクリックしたときのイベント
   const Set_room = (e) => {
+    var str = room;
+    if (str.length !== 0) {
+      document.getElementById(str).style.backgroundColor = "#ffffff";
+    }
     var id;
     id = e.currentTarget.id;
     setRoom((room) => id);
+    document.getElementById(id).style.backgroundColor = "#7fe5ff";
   };
 
   return (
@@ -53,7 +58,7 @@ const ThirdTowerSixFloor = () => {
                 <div className={`flex flex-row align-middle h-[180px]`}>
                   <div
                     onClick={Set_room}
-id="3601"
+                    id="3601"
                     className={`w-[195px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[60px]`}
                   >
                     <div>3601</div>
@@ -61,7 +66,7 @@ id="3601"
                   </div>
                   <div
                     onClick={Set_room}
-id="3602"
+                    id="3602"
                     className={`w-[195px] border-2 border-black hover:bg-gray-200 m-0.5 py-[60px]`}
                   >
                     <div>3602</div>
