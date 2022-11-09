@@ -11,7 +11,7 @@ const SecondTowerSixFloor = () => {
             <div className={`flex h-[200px]`}>
               <div
                 id="2601"
-                className={`w-[118px] h-[220px] border-2 border-black m-0.5 px-2 py-[70px] flex-col`}
+                className={`w-[118px] h-[220px] border-2 border-black hover:bg-gray-200 m-0.5 px-2 py-[70px] flex-col`}
               >
                 <div>2601</div>
                 <div>開放実習室</div>
@@ -20,14 +20,14 @@ const SecondTowerSixFloor = () => {
               <div className={`flex-col mr-0.5`}>
                 <div
                   id="2602"
-                  className={`w-[120px] h-[110px] border-2 border-black mt-0.5 px-1 py-[25px] flex-col`}
+                  className={`w-[120px] h-[110px] border-2 border-black hover:bg-gray-200 mt-0.5 px-1 py-[25px] flex-col`}
                 >
                   <div>2602</div>
                   <div>実習室</div>
                 </div>
                 <div
                   id="2603"
-                  className={`w-[120px] h-[110px] border-x-2 border-b-2 border-black mb-0.5 px-1 py-[25px] flex-col`}
+                  className={`w-[120px] h-[110px] border-x-2 border-b-2 border-black hover:bg-gray-200 mb-0.5 px-1 py-[25px] flex-col`}
                 >
                   <div>2603</div>
                   <div>実習室</div>

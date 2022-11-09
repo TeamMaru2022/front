@@ -9,7 +9,7 @@ const FirstTowerFourFloor = () => {
             <div className={`flex-col w-[100px]`}>
               <div
                 id="1403"
-                className={`h-[117px] border-2 border-black mx-0.5 mt-0.5 py-[15px] flex-col`}
+                className={`h-[117px] border-2 border-black mx-0.5 mt-0.5 py-[15px] flex-col hover:bg-gray-200`}
               >
                 <div>1403</div>
                 <div>ノートPC</div>
@@ -17,7 +17,7 @@ const FirstTowerFourFloor = () => {
               </div>
               <div
                 id="1404"
-                className={`h-[117px] border-x-2 border-black mx-0.5 py-[15px] flex-col`}
+                className={`h-[117px] border-x-2 border-black mx-0.5 py-[15px] flex-col hover:bg-gray-200`}
               >
                 <div>1404</div>
                 <div>ノートPC</div>
@@ -25,7 +25,7 @@ const FirstTowerFourFloor = () => {
               </div>
               <div
                 id="1405"
-                className={`h-[117px] border-2 border-black mx-0.5 mb-0.5 py-[15px] flex-col`}
+                className={`h-[117px] border-2 border-black mx-0.5 mb-0.5 py-[15px] flex-col hover:bg-gray-200`}
               >
                 <div>1405</div>
                 <div>ノートPC</div>
@@ -35,13 +35,13 @@ const FirstTowerFourFloor = () => {
             <div className={`flex-col w-[190px]`}>
               <div
                 id="1401"
-                className={`h-[125px] mx-0.5 mt-0.5 border-x-2 border-t-2 border-black py-[45px]`}
+                className={`h-[125px] mx-0.5 mt-0.5 border-x-2 border-t-2 border-black py-[45px] hover:bg-gray-200`}
               >
                 1401実習室
               </div>
               <div
                 id="1402"
-                className={`h-[125px] mx-0.5 border-2 border-black py-[45px]`}
+                className={`h-[125px] mx-0.5 border-2 border-black py-[45px] hover:bg-gray-200`}
               >
                 1402実習室
               </div>

@@ -9,28 +9,28 @@ const FirstTowerThreeFloor = () => {
             <div className={`flex-col w-[90px]`}>
               <div
                 id="1305"
-                className={`h-[88px] border-2 border-black mx-0.5 mt-0.5 py-[15px] flex-col`}
+                className={`h-[88px] border-2 border-black hover:bg-gray-200 mx-0.5 mt-0.5 py-[15px] flex-col`}
               >
                 <div>1305</div>
                 <div>教室</div>
               </div>
               <div
                 id="1306"
-                className={`h-[88px] border-x-2 border-b-2 border-black mx-0.5 py-[15px] flex-col`}
+                className={`h-[88px] border-x-2 border-b-2 border-black hover:bg-gray-200 mx-0.5 py-[15px] flex-col`}
               >
                 <div>1306</div>
                 <div>教室</div>
               </div>
               <div
                 id="1307"
-                className={`h-[88px] border-x-2 border-black mx-0.5 py-[15px] flex-col`}
+                className={`h-[88px] border-x-2 border-black hover:bg-gray-200 mx-0.5 py-[15px] flex-col`}
               >
                 <div>1307</div>
                 <div>教室</div>
               </div>
               <div
                 id="1308"
-                className={`h-[88px] border-2 border-black mx-0.5 mb-0.5 py-[15px] flex-col`}
+                className={`h-[88px] border-2 border-black hover:bg-gray-200 mx-0.5 mb-0.5 py-[15px] flex-col`}
               >
                 <div>1308</div>
                 <div>教室</div>
@@ -49,7 +49,7 @@ const FirstTowerThreeFloor = () => {
               </div>
               <div
                 id="1309"
-                className={`w-[90px] h-[90px] mx-auto border-2 border-black mt-[40px] py-[15px] flex-col`}
+                className={`w-[90px] h-[90px] mx-auto border-2 border-black hover:bg-gray-200 mt-[40px] py-[15px] flex-col`}
               >
                 <div>1309</div>
                 <div>教室</div>
@@ -59,7 +59,7 @@ const FirstTowerThreeFloor = () => {
             <div className={`flex-col w-[90px]`}>
               <div
                 id="1301"
-                className={`h-[88px] border-2 border-black mx-0.5 mt-0.5 flex-col`}
+                className={`h-[88px] border-2 border-black hover:bg-gray-200 mx-0.5 mt-0.5 flex-col`}
               >
                 <div>1301</div>
                 <div>ノートPC</div>
@@ -67,7 +67,7 @@ const FirstTowerThreeFloor = () => {
               </div>
               <div
                 id="1302"
-                className={`h-[88px] border-x-2 border-b-2 border-black mx-0.5 flex-col`}
+                className={`h-[88px] border-x-2 border-b-2 border-black hover:bg-gray-200 mx-0.5 flex-col`}
               >
                 <div>1302</div>
                 <div>ノートPC</div>
@@ -75,7 +75,7 @@ const FirstTowerThreeFloor = () => {
               </div>
               <div
                 id="1303"
-                className={`h-[88px] border-x-2 border-black mx-0.5 flex-col`}
+                className={`h-[88px] border-x-2 border-black hover:bg-gray-200 mx-0.5 flex-col`}
               >
                 <div>1303</div>
                 <div>ノートPC</div>
@@ -83,7 +83,7 @@ const FirstTowerThreeFloor = () => {
               </div>
               <div
                 id="1304"
-                className={`h-[88px] border-2 border-black mx-0.5 mb-0.5 flex-col`}
+                className={`h-[88px] border-2 border-black hover:bg-gray-200 mx-0.5 mb-0.5 flex-col`}
               >
                 <div>1304</div>
                 <div>ノートPC</div>

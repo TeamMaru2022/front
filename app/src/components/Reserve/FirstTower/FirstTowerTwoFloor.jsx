@@ -18,7 +18,7 @@ const FirstTowerTwoFloor = () => {
               </div>
               <div
                 id="1204"
-                className={`h-[96px] border-2 border-black mx-0.5 py-[3px] flex-col`}
+                className={`h-[96px] border-2 border-black hover:bg-gray-200 mx-0.5 py-[3px] flex-col`}
               >
                 <div>1204</div>
                 <div>ノートPC</div>
@@ -26,7 +26,7 @@ const FirstTowerTwoFloor = () => {
               </div>
               <div
                 id="1205"
-                className={`h-[96px] border-x-2 border-b-2 border-black mx-0.5 mb-0.5 py-[3px] flex-col`}
+                className={`h-[96px] border-x-2 border-b-2 border-black hover:bg-gray-200 mx-0.5 mb-0.5 py-[3px] flex-col`}
               >
                 <div>1205</div>
                 <div>ノートPC</div>
@@ -46,7 +46,7 @@ const FirstTowerTwoFloor = () => {
               </div>
               <div
                 id="1206"
-                className={`w-[90px] h-[90px] mx-auto border-2 border-black mt-[40px] py-[1px] flex-col`}
+                className={`w-[90px] h-[90px] mx-auto border-2 border-black hover:bg-gray-200 mt-[40px] py-[1px] flex-col`}
               >
                 <div>1206</div>
                 <div>ノートPC</div>
@@ -56,7 +56,7 @@ const FirstTowerTwoFloor = () => {
             <div className={`flex-col w-[90px]`}>
               <div
                 id="1201"
-                className={`h-[117px] border-2 border-black mx-0.5 mt-0.5 py-[13px] flex-col`}
+                className={`h-[117px] border-2 border-black hover:bg-gray-200 mx-0.5 mt-0.5 py-[13px] flex-col`}
               >
                 <div>1201</div>
                 <div>ノートPC</div>
@@ -64,7 +64,7 @@ const FirstTowerTwoFloor = () => {
               </div>
               <div
                 id="1202"
-                className={`h-[117px] border-x-2 border-black mx-0.5 py-[13px] flex-col`}
+                className={`h-[117px] border-x-2 border-black hover:bg-gray-200 mx-0.5 py-[13px] flex-col`}
               >
                 <div>1202</div>
                 <div>ノートPC</div>
@@ -72,7 +72,7 @@ const FirstTowerTwoFloor = () => {
               </div>
               <div
                 id="1203"
-                className={`h-[117px] border-2 border-black mx-0.5 mb-0.5 py-[13px] flex-col`}
+                className={`h-[117px] border-2 border-black hover:bg-gray-200 mx-0.5 mb-0.5 py-[13px] flex-col`}
               >
                 <div>1203</div>
                 <div>ノートPC</div>

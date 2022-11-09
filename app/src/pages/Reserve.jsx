@@ -44,7 +44,7 @@ const Reserve = (props) => {
           className={`flex flex-col border-2 m-3 mx-4 text-center bg-[#F4F5F5] w-1/3 p-2`}
         >
           <div
-            className={`w-100% border-2 border-[#F4F5F5] text-[#66aacc] text-2xl font-bold`}
+            className={`w-100% border-[#F4F5F5] text-[#66aacc] text-2xl font-bold`}
           >
             １号館
           </div>
@@ -53,7 +53,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "12"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "12");
@@ -65,7 +65,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "13"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "13");
@@ -77,7 +77,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "14"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "14");
@@ -93,7 +93,7 @@ const Reserve = (props) => {
           className={`flex flex-col border-2 m-3 mx-4 text-center bg-[#F4F5F5] w-1/3 p-2`}
         >
           <div
-            className={`w-100% border-2 border-[#F4F5F5] text-[#66aacc] text-2xl font-bold`}
+            className={`w-100% text-[#66aacc] text-2xl font-bold`}
           >
             ２号館
           </div>
@@ -102,7 +102,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "22"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "22");
@@ -114,7 +114,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "23"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "23");
@@ -126,7 +126,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "24"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "24");
@@ -140,7 +140,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "25"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "25");
@@ -152,7 +152,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "26"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "26");
@@ -177,7 +177,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "32"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "32");
@@ -189,7 +189,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "33"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "33");
@@ -201,7 +201,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "34"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "34");
@@ -215,7 +215,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "35"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "35");
@@ -227,7 +227,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "36"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "36");
@@ -239,7 +239,7 @@ const Reserve = (props) => {
               className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "37"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "37");

@@ -28,19 +28,19 @@ const SecondTower = () => {
             <>
               <a
                 href="/first"
-                className="mx-3 px-4 pt-0.5  rounded-lg hover:translate-y-0.5 hover:bg-gray-200 hover:border-b-2 hover:border-gray-300 transform transition"
+                className="mx-3 px-4 pt-1.5 rounded-lg bottom-0 hover:translate-y-0.5 hover:bg-gray-200 hover:border-b-2 hover:border-gray-300 transform transition"
               >
                 1号館
               </a>
               <a
                 href="/second"
-                className="mx-3 px-4 pt-0.5  rounded-lg bg-gray-300 border-b-2 border-gray-400"
+                className="mx-3 px-4 pt-1.5  rounded-lg bg-gray-300 border-b-2 border-gray-400"
               >
                 2号館
               </a>
               <a
                 href="/third"
-                className="mx-3 px-4 pt-0.5 rounded-lg hover:translate-y-0.5 hover:bg-gray-200 hover:border-b-2 hover:border-gray-300 transform transition"
+                className="mx-3 px-4 pt-1.5 rounded-lg hover:translate-y-0.5 hover:bg-gray-200 hover:border-b-2 hover:border-gray-300 transform transition"
               >
                 3号館
               </a>

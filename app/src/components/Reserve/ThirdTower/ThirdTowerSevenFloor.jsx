@@ -35,17 +35,17 @@ const ThirdTowerSevenFloor = () => {
             </div>
           </div>
           <div className={`flex flex-row align-middle h-[180px]`}>
-            <div id="3701" className={`w-[130px]  border-2 border-black m-0.5 py-[40px]`}>
+            <div id="3701" className={`w-[130px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}>
               <div>3701</div>
               <div>ノートPC</div>
               <div>対応教室</div>
             </div>
-            <div id="3702" className={`w-[130px] border-2 border-black m-0.5 py-[40px]`}>
+            <div id="3702" className={`w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}>
               <div>3702</div>
               <div>ノートPC</div>
               <div>対応教室</div>
             </div>
-            <div id="3703" className={`w-[130px] border-2 border-black m-0.5 py-[40px]`}>
+            <div id="3703" className={`w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}>
               <div>3703</div>
               <div>ノートPC</div>
               <div>対応教室</div>

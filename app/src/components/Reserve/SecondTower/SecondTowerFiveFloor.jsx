@@ -10,7 +10,7 @@ const SecondTowerFiveFloor = () => {
           <div className={`flex-col `}>
             <div
               id="2503"
-              className={`w-[120px] h-[115px] border-2 border-black mt-0.5 ml-0.5 flex-col`}
+              className={`w-[120px] h-[115px] border-2 border-black hover:bg-gray-200 mt-0.5 ml-0.5 flex-col`}
             >
               <div>2503</div>
               <div>デッサン教室</div>
@@ -19,7 +19,7 @@ const SecondTowerFiveFloor = () => {
             </div>
             <div
               id="2504"
-              className={`w-[120px] h-[115px] border-x-2 border-black ml-0.5 flex-col`}
+              className={`w-[120px] h-[115px] border-x-2 border-black hover:bg-gray-200 ml-0.5 flex-col`}
             >
               <div>2504</div>
               <div>デッサン教室</div>
@@ -28,7 +28,7 @@ const SecondTowerFiveFloor = () => {
             </div>
             <div
               id="2505"
-              className={`w-[120px] h-[130px] border-2 border-black mb-0.5 ml-0.5 px-2 py-[20px]`}
+              className={`w-[120px] h-[130px] border-2 border-black hover:bg-gray-200 mb-0.5 ml-0.5 px-2 py-[20px]`}
             >
               <div>2505</div>
               <div>ノートPC</div>
@@ -39,7 +39,7 @@ const SecondTowerFiveFloor = () => {
             <div className={`w-[40px] h-[240px] m-0.5 px-2 py-1`}></div>
             <div
               id="2502"
-              className={`w-[153px] h-[116px] border-2 border-black m-0.5 absolute py-[25px]`}
+              className={`w-[153px] h-[116px] border-2 border-black hover:bg-gray-200 m-0.5 absolute py-[25px]`}
             >
               <div>2502</div>
               <div>実習室</div>
@@ -47,7 +47,7 @@ const SecondTowerFiveFloor = () => {
           </div>
           <div
             id="2501"
-            className={`w-[120px] h-[220px] border-2 border-black m-0.5 px-2 py-[70px]`}
+            className={`w-[120px] h-[220px] border-2 border-black hover:bg-gray-200 m-0.5 px-2 py-[70px]`}
           >
             <div>2501</div>
             <div>ノートPC</div>
