@@ -15,7 +15,6 @@ import ThirdTowerFourFloor from "../components/Reserve/ThirdTower/ThirdTowerFour
 import ThirdTowerFiveFloor from "../components/Reserve/ThirdTower/ThirdTowerFiveFloor";
 import ThirdTowerSixFloor from "../components/Reserve/ThirdTower/ThirdTowerSixFloor";
 import ThirdTowerSevenFloor from "../components/Reserve/ThirdTower/ThirdTowerSevenFloor";
-import ReserveClass from "../components/ReserveClass";
 
 const Reserve = (props) => {
   // floor: 何号館何階かを保持する変数
@@ -38,7 +37,7 @@ const Reserve = (props) => {
         </div>
       </header>
 
-      <div className={`flex justify-around pt-20`}>
+      <div className={`flex justify-around pt-10`}>
         {/* １号館 */}
         <div
           className={`flex flex-col border-2 m-3 mx-4 text-center bg-[#F4F5F5] w-1/3 p-2`}
@@ -92,9 +91,7 @@ const Reserve = (props) => {
         <div
           className={`flex flex-col border-2 m-3 mx-4 text-center bg-[#F4F5F5] w-1/3 p-2`}
         >
-          <div
-            className={`w-100% text-[#66aacc] text-2xl font-bold`}
-          >
+          <div className={`w-100% text-[#66aacc] text-2xl font-bold`}>
             ２号館
           </div>
           <div className={`flex`}>
@@ -168,7 +165,7 @@ const Reserve = (props) => {
           className={`flex flex-col border-2 m-3 mx-4 text-center bg-[#F4F5F5] w-1/3 p-2`}
         >
           <div
-            className={`w-100% border-2 border-[#F4F5F5] text-[#66aacc] text-2xl font-bold`}
+            className={`w-100% text-[#66aacc] text-2xl font-bold`}
           >
             ３号館
           </div>
@@ -250,8 +247,8 @@ const Reserve = (props) => {
           </div>
         </div>
       </div>
-      <div className={`flex justify-around pt-14`}>
-        <div className={`flex place-content-center my-8 w-3/5`}>
+      <div className={`flex justify-around pt-10`}>
+        {/* <div className={`flex place-content-center my-8 w-3/5`}> */}
           {floor === "12" && <FirstTowerTwoFloor />}
           {floor === "13" && <FirstTowerThreeFloor />}
           {floor === "14" && <FirstTowerFourFloor />}
@@ -266,10 +263,14 @@ const Reserve = (props) => {
           {floor === "35" && <ThirdTowerFiveFloor />}
           {floor === "36" && <ThirdTowerSixFloor />}
           {floor === "37" && <ThirdTowerSevenFloor />}
-        </div>
-        <div className={`flex mt-8 w-2/5 text-xl mb-8`}>
-          <ReserveClass room={floor} />
-        </div>
+        {/* </div>
+        <div className={`w-1/3 pr-[100px] pt-[30px]`}>
+          <img
+            src="../../images/projector.png"
+            alt="projector"
+            className={`object-contain`}
+          />
+        </div> */}
       </div>
     </>
   );

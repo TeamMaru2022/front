@@ -1,78 +1,108 @@
 import React from "react";
 
 const FirstTowerFourFloor = () => {
+  const [room, setRoom] = React.useState("");
+
+  // 教室をクリックしたときのイベント
+  const Set_room = (e) => {
+    var id;
+    id = e.currentTarget.id;
+    setRoom((room) => id);
+  };
+
   return (
-    <div>
-      <div className={` w-[345px] h-100%`}>
-        <div className={`flex-row text-center text-lg`}>
-          <div className={`flex justify-between border-2 border-gray-400`}>
-            <div className={`flex-col w-[100px]`}>
-              <div
-                id="1403"
-                className={`h-[117px] border-2 border-black mx-0.5 mt-0.5 py-[15px] flex-col hover:bg-gray-200`}
-              >
-                <div>1403</div>
-                <div>ノートPC</div>
-                <div>対応教室</div>
-              </div>
-              <div
-                id="1404"
-                className={`h-[117px] border-x-2 border-black mx-0.5 py-[15px] flex-col hover:bg-gray-200`}
-              >
-                <div>1404</div>
-                <div>ノートPC</div>
-                <div>対応教室</div>
-              </div>
-              <div
-                id="1405"
-                className={`h-[117px] border-2 border-black mx-0.5 mb-0.5 py-[15px] flex-col hover:bg-gray-200`}
-              >
-                <div>1405</div>
-                <div>ノートPC</div>
-                <div>対応教室</div>
-              </div>
-            </div>
-            <div className={`flex-col w-[190px]`}>
-              <div
-                id="1401"
-                className={`h-[125px] mx-0.5 mt-0.5 border-x-2 border-t-2 border-black py-[45px] hover:bg-gray-200`}
-              >
-                1401実習室
-              </div>
-              <div
-                id="1402"
-                className={`h-[125px] mx-0.5 border-2 border-black py-[45px] hover:bg-gray-200`}
-              >
-                1402実習室
-              </div>
-              <div className={`flex justify-end h-[90px]`}>
-                <div
-                  className={`w-[65px] h-[80px] mt-[22px] mb-0.5 border-y-2 border-l-2 border-gray-500 text-base text-gray-700 flex-col`}
-                >
-                  <div>MTG</div>
-                  <div>ﾙｰﾑ</div>
-                  <div>1</div>
+    <>
+      <div className={`flex place-content-center my-8 w-3/5`}>
+        <div className={`flex flex-col`}>
+          <div className={` w-[345px] h-100%`}>
+            <div className={`flex-row text-center text-lg`}>
+              <div className={`flex justify-between border-2 border-gray-400`}>
+                <div className={`flex-col w-[100px]`}>
+                  <div
+                    onClick={Set_room}
+                    id="1403"
+                    className={`h-[117px] border-2 border-black mx-0.5 mt-0.5 py-[15px] flex-col hover:bg-gray-200`}
+                  >
+                    <div>1403</div>
+                    <div>ノートPC</div>
+                    <div>対応教室</div>
+                  </div>
+                  <div
+                    onClick={Set_room}
+                    id="1404"
+                    className={`h-[117px] border-x-2 border-black mx-0.5 py-[15px] flex-col hover:bg-gray-200`}
+                  >
+                    <div>1404</div>
+                    <div>ノートPC</div>
+                    <div>対応教室</div>
+                  </div>
+                  <div
+                    onClick={Set_room}
+                    id="1405"
+                    className={`h-[117px] border-2 border-black mx-0.5 mb-0.5 py-[15px] flex-col hover:bg-gray-200`}
+                  >
+                    <div>1405</div>
+                    <div>ノートPC</div>
+                    <div>対応教室</div>
+                  </div>
                 </div>
-                <div
-                  className={`w-[65px] h-[100px] my-0.5 mr-0.5 border-2 border-gray-500 text-gray-700 text-base flex-col pt-[15px]`}
-                >
-                  <div>MTG</div>
-                  <div>ﾙｰﾑ</div>
-                  <div>2</div>
+                <div className={`flex-col w-[190px]`}>
+                  <div
+                    onClick={Set_room}
+                    id="1401"
+                    className={`h-[125px] mx-0.5 mt-0.5 border-x-2 border-t-2 border-black py-[45px] hover:bg-gray-200`}
+                  >
+                    1401実習室
+                  </div>
+                  <div
+                    onClick={Set_room}
+                    id="1402"
+                    className={`h-[125px] mx-0.5 border-2 border-black py-[45px] hover:bg-gray-200`}
+                  >
+                    1402実習室
+                  </div>
+                  <div className={`flex justify-end h-[90px]`}>
+                    <div
+                      className={`w-[65px] h-[80px] mt-[22px] mb-0.5 border-y-2 border-l-2 border-gray-500 text-base text-gray-700 flex-col`}
+                    >
+                      <div>MTG</div>
+                      <div>ﾙｰﾑ</div>
+                      <div>1</div>
+                    </div>
+                    <div
+                      className={`w-[65px] h-[100px] my-0.5 mr-0.5 border-2 border-gray-500 text-gray-700 text-base flex-col pt-[15px]`}
+                    >
+                      <div>MTG</div>
+                      <div>ﾙｰﾑ</div>
+                      <div>2</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className={`pb-3`}>
+            <img
+              className={`w-[90px] ml-[90px]`}
+              src="./images/FirstTower_stairs.png"
+              alt="階段"
+            />
+          </div>
         </div>
       </div>
-      <div className={`pb-3`}>
+      <div className={`w-1/3 pr-[30px] mr-[80px] pt-[20px] flex-col`}>
+        <div
+          className={`flex text-[40px] font-bold place-content-center h-[60px] mb-[10px]`}
+        >
+          {room}
+        </div>
         <img
-          className={`w-[90px] ml-[90px]`}
-          src="./images/FirstTower_stairs.png"
-          alt="階段"
+          src="../../images/projector.png"
+          alt="projector"
+          className={`object-contain flex`}
         />
       </div>
-    </div>
+    </>
   );
 };
 
