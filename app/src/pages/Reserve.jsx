@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import FirstTowerFourFloor from "../components/ReserveFirstTower/FirstTowerFourFloor";
-import FirstTowerThreeFloor from "../components/ReserveFirstTower/FirstTowerThreeFloor";
-import FirstTowerTwoFloor from "../components/ReserveFirstTower/FirstTowerTwoFloor";
-import SecondTowerTwoFloor from "../components/ReserveSecondTower/SecondTowerTwoFloor";
-import SecondTowerThreeFloor from "../components/ReserveSecondTower/SecondTowerThreeFloor";
-import SecondTowerFourFloor from "../components/ReserveSecondTower/SecondTowerFourFloor";
-import SecondTowerFiveFloor from "../components/ReserveSecondTower/SecondTowerFiveFloor";
-import SecondTowerSixFloor from "../components/ReserveSecondTower/SecondTowerSixFloor";
-import ThirdTowerTwoFloor from "../components/ReserveThirdTower/ThirdTowerTwoFloor";
-import ThirdTowerThreeFloor from "../components/ReserveThirdTower/ThirdTowerThreeFloor";
-import ThirdTowerFourFloor from "../components/ReserveThirdTower/ThirdTowerFourFloor";
-import ThirdTowerFiveFloor from "../components/ReserveThirdTower/ThirdTowerFiveFloor";
-import ThirdTowerSixFloor from "../components/ReserveThirdTower/ThirdTowerSixFloor";
-import ThirdTowerSevenFloor from "../components/ReserveThirdTower/ThirdTowerSevenFloor";
+import FirstTowerFourFloor from "../components/Reserve/FirstTower/FirstTowerFourFloor";
+import FirstTowerThreeFloor from "../components/Reserve/FirstTower/FirstTowerThreeFloor";
+import FirstTowerTwoFloor from "../components/Reserve/FirstTower/FirstTowerTwoFloor";
+import SecondTowerTwoFloor from "../components/Reserve/SecondTower/SecondTowerTwoFloor";
+import SecondTowerThreeFloor from "../components/Reserve/SecondTower/SecondTowerThreeFloor";
+import SecondTowerFourFloor from "../components/Reserve/SecondTower/SecondTowerFourFloor";
+import SecondTowerFiveFloor from "../components/Reserve/SecondTower/SecondTowerFiveFloor";
+import SecondTowerSixFloor from "../components/Reserve/SecondTower/SecondTowerSixFloor";
+import ThirdTowerTwoFloor from "../components/Reserve/ThirdTower/ThirdTowerTwoFloor";
+import ThirdTowerThreeFloor from "../components/Reserve/ThirdTower/ThirdTowerThreeFloor";
+import ThirdTowerFourFloor from "../components/Reserve/ThirdTower/ThirdTowerFourFloor";
+import ThirdTowerFiveFloor from "../components/Reserve/ThirdTower/ThirdTowerFiveFloor";
+import ThirdTowerSixFloor from "../components/Reserve/ThirdTower/ThirdTowerSixFloor";
+import ThirdTowerSevenFloor from "../components/Reserve/ThirdTower/ThirdTowerSevenFloor";
 import ReserveClass from "../components/ReserveClass";
 
 const Reserve = (props) => {
