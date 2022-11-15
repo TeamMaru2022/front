@@ -1,7 +1,7 @@
 import React from "react";
 import useMedia from "use-media";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./index.css";
+import "./styles/index.css";
 import TopPage from "./pages/TopPage";
 import FirstTower from "./pages/FirstTower";
 import SecondTower from "./pages/SecondTower";
