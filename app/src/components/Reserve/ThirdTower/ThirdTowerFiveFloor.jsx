@@ -15,6 +15,29 @@ const ThirdTowerFiveFloor = () => {
     document.getElementById(id).style.backgroundColor = "#7fe5ff";
   };
 
+  // 教室のhover時の動き
+  const Hover_room = (e) => {
+    var str = room;
+    var id;
+    id = e.currentTarget.id;
+    if (str.length !== 0) {
+      if (str !== id) {
+        document.getElementById(id).style.backgroundColor = "#E5E7EB";
+      }
+    }
+  };
+  // 教室のhoverを外した時の動き
+  const Leave_room = (e) => {
+    var str = room;
+    var id;
+    id = e.currentTarget.id;
+    if (str.length !== 0) {
+      if (str !== id) {
+        document.getElementById(id).style.backgroundColor = "#FFFFFF";
+      }
+    }
+  };
+
   return (
     <>
       <div className={`flex place-content-center my-8 w-3/5`}>
@@ -58,6 +81,8 @@ const ThirdTowerFiveFloor = () => {
                 <div className={`flex flex-row align-middle h-[180px]`}>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="3501"
                     className={`w-[195px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
@@ -67,6 +92,8 @@ const ThirdTowerFiveFloor = () => {
                   </div>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="3502"
                     className={`w-[195px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >

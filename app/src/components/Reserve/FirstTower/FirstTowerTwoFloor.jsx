@@ -15,6 +15,29 @@ const FirstTowerTwoFloor = () => {
     document.getElementById(id).style.backgroundColor = "#7fe5ff";
   };
 
+  // 教室のhover時の動き
+  const Hover_room = (e) => {
+    var str = room;
+    var id;
+    id = e.currentTarget.id;
+    if (str.length !== 0) {
+      if (str !== id) {
+        document.getElementById(id).style.backgroundColor = "#E5E7EB";
+      }
+    }
+  };
+  // 教室のhoverを外した時の動き
+  const Leave_room = (e) => {
+    var str = room;
+    var id;
+    id = e.currentTarget.id;
+    if (str.length !== 0) {
+      if (str !== id) {
+        document.getElementById(id).style.backgroundColor = "#FFFFFF";
+      }
+    }
+  };
+
   return (
     <>
       <div className={`flex place-content-center my-8 w-3/5`}>
@@ -34,6 +57,8 @@ const FirstTowerTwoFloor = () => {
                   </div>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="1204"
                     className={`h-[96px] border-2 border-black hover:bg-gray-200 mx-0.5 py-[3px] flex-col`}
                   >
@@ -43,6 +68,8 @@ const FirstTowerTwoFloor = () => {
                   </div>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="1205"
                     className={`h-[96px] border-x-2 border-b-2 border-black hover:bg-gray-200 mx-0.5 mb-0.5 py-[3px] flex-col`}
                   >
@@ -64,6 +91,8 @@ const FirstTowerTwoFloor = () => {
                   </div>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="1206"
                     className={`w-[90px] h-[90px] mx-auto border-2 border-black hover:bg-gray-200 mt-[40px] py-[1px] flex-col`}
                   >
@@ -75,6 +104,8 @@ const FirstTowerTwoFloor = () => {
                 <div className={`flex-col w-[90px]`}>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="1201"
                     className={`h-[117px] border-2 border-black hover:bg-gray-200 mx-0.5 mt-0.5 py-[13px] flex-col`}
                   >
@@ -84,6 +115,8 @@ const FirstTowerTwoFloor = () => {
                   </div>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="1202"
                     className={`h-[117px] border-x-2 border-black hover:bg-gray-200 mx-0.5 py-[13px] flex-col`}
                   >
@@ -93,6 +126,8 @@ const FirstTowerTwoFloor = () => {
                   </div>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="1203"
                     className={`h-[117px] border-2 border-black hover:bg-gray-200 mx-0.5 mb-0.5 py-[13px] flex-col`}
                   >

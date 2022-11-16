@@ -5,7 +5,7 @@ const SecondTowerSixFloor = () => {
 
   // 教室をクリックしたときのイベント
   const Set_room = (e) => {
-    var str = room
+    var str = room;
     if (str.length !== 0) {
       document.getElementById(str).style.backgroundColor = "#ffffff";
     }
@@ -14,7 +14,29 @@ const SecondTowerSixFloor = () => {
     setRoom((room) => id);
     document.getElementById(id).style.backgroundColor = "#7fe5ff";
   };
-  
+
+  // 教室のhover時の動き
+  const Hover_room = (e) => {
+    var str = room;
+    var id;
+    id = e.currentTarget.id;
+    if (str.length !== 0) {
+      if (str !== id) {
+        document.getElementById(id).style.backgroundColor = "#E5E7EB";
+      }
+    }
+  };
+  // 教室のhoverを外した時の動き
+  const Leave_room = (e) => {
+    var str = room;
+    var id;
+    id = e.currentTarget.id;
+    if (str.length !== 0) {
+      if (str !== id) {
+        document.getElementById(id).style.backgroundColor = "#FFFFFF";
+      }
+    }
+  };
   return (
     <>
       <div className={`flex place-content-center my-8 w-3/5`}>
@@ -28,6 +50,8 @@ const SecondTowerSixFloor = () => {
                   <div className={`flex h-[200px]`}>
                     <div
                       onClick={Set_room}
+                      onMouseEnter={Hover_room}
+                      onMouseLeave={Leave_room}
                       id="2601"
                       className={`w-[118px] h-[220px] border-2 border-black hover:bg-gray-200 m-0.5 px-2 py-[70px] flex-col`}
                     >
@@ -38,6 +62,8 @@ const SecondTowerSixFloor = () => {
                     <div className={`flex-col mr-0.5`}>
                       <div
                         onClick={Set_room}
+                        onMouseEnter={Hover_room}
+                        onMouseLeave={Leave_room}
                         id="2602"
                         className={`w-[120px] h-[110px] border-2 border-black hover:bg-gray-200 mt-0.5 px-1 py-[25px] flex-col`}
                       >
@@ -46,6 +72,8 @@ const SecondTowerSixFloor = () => {
                       </div>
                       <div
                         onClick={Set_room}
+                        onMouseEnter={Hover_room}
+                        onMouseLeave={Leave_room}
                         id="2603"
                         className={`w-[120px] h-[110px] border-x-2 border-b-2 border-black hover:bg-gray-200 mb-0.5 px-1 py-[25px] flex-col`}
                       >

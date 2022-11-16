@@ -1,11 +1,12 @@
 import React from "react";
+import DatePicker from "../../DatePicker";
 
 const ThirdTowerThreeFloor = () => {
   const [room, setRoom] = React.useState("");
 
   // 教室をクリックしたときのイベント
   const Set_room = (e) => {
-    var str = room
+    var str = room;
     if (str.length !== 0) {
       document.getElementById(str).style.backgroundColor = "#ffffff";
     }
@@ -13,6 +14,29 @@ const ThirdTowerThreeFloor = () => {
     id = e.currentTarget.id;
     setRoom((room) => id);
     document.getElementById(id).style.backgroundColor = "#7fe5ff";
+  };
+
+  // 教室のhover時の動き
+  const Hover_room = (e) => {
+    var str = room;
+    var id;
+    id = e.currentTarget.id;
+    if (str.length !== 0) {
+      if (str !== id) {
+        document.getElementById(id).style.backgroundColor = "#E5E7EB";
+      }
+    }
+  };
+  // 教室のhoverを外した時の動き
+  const Leave_room = (e) => {
+    var str = room;
+    var id;
+    id = e.currentTarget.id;
+    if (str.length !== 0) {
+      if (str !== id) {
+        document.getElementById(id).style.backgroundColor = "#FFFFFF";
+      }
+    }
   };
 
   return (
@@ -58,6 +82,8 @@ const ThirdTowerThreeFloor = () => {
                 <div className={`flex flex-row align-middle h-[180px]`}>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="3301"
                     className={`w-[130px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
@@ -67,6 +93,8 @@ const ThirdTowerThreeFloor = () => {
                   </div>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="3302"
                     className={`w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
@@ -76,6 +104,8 @@ const ThirdTowerThreeFloor = () => {
                   </div>
                   <div
                     onClick={Set_room}
+                    onMouseEnter={Hover_room}
+                    onMouseLeave={Leave_room}
                     id="3303"
                     className={`w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
@@ -95,11 +125,19 @@ const ThirdTowerThreeFloor = () => {
         >
           {room}
         </div>
-        <img
-          src="../../images/projector.png"
-          alt="projector"
-          className={`object-contain flex`}
-        />
+        <div className={`w-[350px]`}>
+          <div className={`absolute z-10 mx-[25px] mt-16 w-[300px] flex-col`}>
+            <div className={`flex-col justify-center`}>
+              <DatePicker />
+              <div className={`flex`}>開始時間</div>
+            </div>
+          </div>
+          <img
+            src="../../images/projector.png"
+            alt="projector"
+            className={`object-contain relative`}
+          />
+        </div>
       </div>
     </>
   );
