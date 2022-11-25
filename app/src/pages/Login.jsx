@@ -51,7 +51,7 @@ const Login = (props) => {
             )}
           </div>
         </div>
-        <Link to="../reserve">
+        <Link to="../reserveTop">
           <div
             className={`w-[200px] m-10 px-7 py-3 mx-auto rounded-lg hover:translate-y-0.5 bg-gray-300 hover:border-b-2 border-gray-400 transform transition`}
           >

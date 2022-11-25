@@ -178,7 +178,7 @@ const FirstTowerThreeFloor = () => {
 
         {/* プロジェクター */}
         <div className={`w-[350px] text-lg`}>
-          {room && <DatePicker />}
+          {room && <DatePicker room={room} />}
           <img
             src="../../images/projector.png"
             alt="projector"

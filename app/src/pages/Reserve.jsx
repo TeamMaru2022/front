@@ -27,13 +27,15 @@ const Reserve = (props) => {
           <a href="/" className={`w-[150px]`}>
             <img src="./images/logo.png" alt="KitAru" className={`px-3`} />
           </a>
-          {/* <div className="mx-3 px-4 pt-2  rounded-lg hover:translate-y-0.5 hover:bg-gray-200 hover:border-b-2 hover:border-gray-300 transform transition">
-            予約申請ページ
-          </div> */}
-          <div className="mx-3 px-4 pt-2">予約申請</div>
-          <div>
-            <Link to="../timetable">時間割</Link>
-          </div>
+          <Link className={`mx-3 px-4 pt-2`} to="../reserveTop">
+            予約Topページ
+          </Link>
+          <Link className={`mx-3 px-4 pt-2`} to="../reserve">
+            予約申請
+          </Link>
+          <Link className={`mx-3 px-4 pt-2`} to="../timetable">
+            時間割
+          </Link>
         </div>
       </header>
 
