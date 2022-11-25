@@ -15,9 +15,9 @@ const ReserveTop = (props) => {
           <Link className={`mx-3 px-4 pt-2`} to="../reserve">
             予約申請
           </Link>
-          <Link className={`mx-3 px-4 pt-2`} to="../timetable">
+          {/* <Link className={`mx-3 px-4 pt-2`} to="../timetable">
             時間割
-          </Link>
+          </Link> */}
         </div>
       </header>
 
@@ -32,7 +32,7 @@ const ReserveTop = (props) => {
             </div>
           </Link>
 
-          <Link className={`flex flex-col mx-auto w-[320px]`} to="../reserve">
+          <Link className={`flex flex-col mx-auto w-[320px]`}>
             <img src="./images/reserve/reserve1.png" alt="reserve1" />
             <div
               className={`text-2xl font-bold text-[#72bfe6] text-center pt-[30px]`}
@@ -41,7 +41,7 @@ const ReserveTop = (props) => {
             </div>
           </Link>
 
-          <Link className={`flex flex-col mx-auto w-[320px]`} to="../reserve">
+          <Link className={`flex flex-col mx-auto w-[320px]`}>
             <img src="./images/reserve/reserve1.png" alt="reserve1" />
             <div
               className={`text-2xl font-bold text-[#72bfe6] text-center pt-[30px]`}
@@ -52,7 +52,7 @@ const ReserveTop = (props) => {
         </div>
 
         <div className={`flex justify-around pt-14 px-[120px]`}>
-          <Link className={`flex flex-col mx-auto w-[320px]`} to="../reserve">
+          <Link className={`flex flex-col mx-auto w-[320px]`}>
             <img src="./images/reserve/reserve2.png" alt="reserve2" />
             <div
               className={`text-2xl font-bold text-[#FF8093] text-center pt-[30px]`}
@@ -61,7 +61,7 @@ const ReserveTop = (props) => {
             </div>
           </Link>
 
-          <Link className={`flex flex-col mx-auto w-[320px]`} to="../reserve">
+          <Link className={`flex flex-col mx-auto w-[320px]`}>
             <img src="./images/reserve/reserve2.png" alt="reserve2" />
             <div
               className={`text-2xl font-bold text-[#FF8093] text-center pt-[30px]`}

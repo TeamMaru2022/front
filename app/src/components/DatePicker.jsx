@@ -62,7 +62,7 @@ const Com_DatePicker = (props) => {
   // 申請内容確認画面ダイアログ
   const [dialog, setDialog] = React.useState(false);
 
-  const dialoghandleChange = (e) => {
+  const dialoghandleChange = () => {
     setMsg("この内容で申請しますか？");
     setDialog(!dialog);
   };
@@ -70,10 +70,20 @@ const Com_DatePicker = (props) => {
   // 申請結果ダイアログ
   const [result, setResult] = React.useState(false);
 
-  const resulthandleChange = (e) => {
+  const resulthandleChange = (flg) => {
     setMsg("下記の内容で受け付けました。");
-    setResult(!result);
+    setResult(flg);
   };
+
+  // roomを保持して、変化したらダイアログを変える
+  const [room, setRoom] = React.useState();
+  if (room !== props.room) {
+    // msgとdialog, resultのflagを初期化
+    // setMsg("この内容で申請しますか？");
+    setDialog(false);
+    setResult(false);
+    setRoom(props.room);
+  }
 
   return (
     <>
@@ -114,7 +124,7 @@ const Com_DatePicker = (props) => {
                     <>
                       <div
                         className={`flex px-6 cursor-pointer rounded-md drop-shadow-lg border-black bg-[#c6ecff] hover:bg-[#a5e1ff] border-2`}
-                        onClick={() => resulthandleChange()}
+                        onClick={() => resulthandleChange(true)}
                       >
                         はい
                       </div>
@@ -123,7 +133,9 @@ const Com_DatePicker = (props) => {
 
                   <div
                     className={`flex px-6 cursor-pointer rounded-md drop-shadow-lg border-black border-2 bg-[#FFFFFF] hover:bg-[#E5E7EB]`}
-                    onClick={() => dialoghandleChange()}
+                    onClick={() => {
+                      dialoghandleChange();
+                    }}
                   >
                     戻る
                   </div>
@@ -174,7 +186,7 @@ const Com_DatePicker = (props) => {
                     onChange={(e) => starthandleChange(e)}
                   >
                     <option value="08">08</option>
-                    <option value="09" >09</option>
+                    <option value="09">09</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
@@ -302,7 +314,11 @@ const Com_DatePicker = (props) => {
                 </div>
                 <div
                   className={`flex px-4 pt-1 cursor-pointer font-bold text-sm rounded-md drop-shadow-lg border-black bg-[#c6ecff] hover:bg-[#a5e1ff] border-2`}
-                  onClick={() => dialoghandleChange()}
+                  onClick={() => {
+                    dialoghandleChange();
+                    resulthandleChange(false);
+                    setMsg("この内容で申請しますか？");
+                  }}
                 >
                   申請
                 </div>
