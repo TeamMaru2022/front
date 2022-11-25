@@ -1,11 +1,12 @@
 import React from "react";
+import DatePicker from "../../DatePicker";
 
 const ThirdTowerFiveFloor = () => {
   const [room, setRoom] = React.useState("");
 
   // 教室をクリックしたときのイベント
   const Set_room = (e) => {
-    var str = room
+    var str = room;
     if (str.length !== 0) {
       document.getElementById(str).style.backgroundColor = "#ffffff";
     }
@@ -84,7 +85,7 @@ const ThirdTowerFiveFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3501"
-                    className={`w-[195px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
+                    className={`cursor-pointer w-[195px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
                     <div>3501</div>
                     <div>ノートPC</div>
@@ -95,7 +96,7 @@ const ThirdTowerFiveFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3502"
-                    className={`w-[195px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
+                    className={`cursor-pointer w-[195px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
                     <div>3502</div>
                     <div>ノートPC</div>
@@ -109,15 +110,20 @@ const ThirdTowerFiveFloor = () => {
       </div>
       <div className={`w-1/3 pr-[30px] mr-[80px] pt-[20px] flex-col`}>
         <div
-          className={`flex text-[40px] font-bold place-content-center h-[60px] mb-[10px]`}
+          className={`flex text-[40px] font-bold h-[60px] mb-[10px] ml-[130px]`}
         >
           {room}
         </div>
-        <img
-          src="../../images/projector.png"
-          alt="projector"
-          className={`object-contain flex`}
-        />
+
+        {/* プロジェクター */}
+        <div className={`w-[350px] text-lg`}>
+          {room && <DatePicker room={room} />}
+          <img
+            src="../../images/projector.png"
+            alt="projector"
+            className={`object-contain relative`}
+          />
+        </div>
       </div>
     </>
   );

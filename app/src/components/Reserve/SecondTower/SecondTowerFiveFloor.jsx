@@ -1,4 +1,5 @@
 import React from "react";
+import DatePicker from "../../DatePicker";
 
 const SecondTowerFiveFloor = () => {
   const [room, setRoom] = React.useState("");
@@ -53,7 +54,7 @@ const SecondTowerFiveFloor = () => {
                   onMouseEnter={Hover_room}
                   onMouseLeave={Leave_room}
                   id="2503"
-                  className={`w-[120px] h-[115px] border-2 border-black hover:bg-gray-200 mt-0.5 ml-0.5 flex-col`}
+                  className={`cursor-pointer w-[120px] h-[115px] border-2 border-black hover:bg-gray-200 mt-0.5 ml-0.5 flex-col`}
                 >
                   <div>2503</div>
                   <div>デッサン教室</div>
@@ -65,7 +66,7 @@ const SecondTowerFiveFloor = () => {
                   onMouseEnter={Hover_room}
                   onMouseLeave={Leave_room}
                   id="2504"
-                  className={`w-[120px] h-[115px] border-x-2 border-black hover:bg-gray-200 ml-0.5 flex-col`}
+                  className={`cursor-pointer w-[120px] h-[115px] border-x-2 border-black hover:bg-gray-200 ml-0.5 flex-col`}
                 >
                   <div>2504</div>
                   <div>デッサン教室</div>
@@ -77,7 +78,7 @@ const SecondTowerFiveFloor = () => {
                   onMouseEnter={Hover_room}
                   onMouseLeave={Leave_room}
                   id="2505"
-                  className={`w-[120px] h-[130px] border-2 border-black hover:bg-gray-200 mb-0.5 ml-0.5 px-2 py-[20px]`}
+                  className={`cursor-pointer w-[120px] h-[130px] border-2 border-black hover:bg-gray-200 mb-0.5 ml-0.5 px-2 py-[20px]`}
                 >
                   <div>2505</div>
                   <div>ノートPC</div>
@@ -91,7 +92,7 @@ const SecondTowerFiveFloor = () => {
                   onMouseEnter={Hover_room}
                   onMouseLeave={Leave_room}
                   id="2502"
-                  className={`w-[153px] h-[116px] border-2 border-black hover:bg-gray-200 m-0.5 absolute py-[25px]`}
+                  className={`cursor-pointer w-[153px] h-[116px] border-2 border-black hover:bg-gray-200 m-0.5 absolute py-[25px]`}
                 >
                   <div>2502</div>
                   <div>実習室</div>
@@ -102,7 +103,7 @@ const SecondTowerFiveFloor = () => {
                 onMouseEnter={Hover_room}
                 onMouseLeave={Leave_room}
                 id="2501"
-                className={`w-[120px] h-[220px] border-2 border-black hover:bg-gray-200 m-0.5 px-2 py-[70px]`}
+                className={`cursor-pointer w-[120px] h-[220px] border-2 border-black hover:bg-gray-200 m-0.5 px-2 py-[70px]`}
               >
                 <div>2501</div>
                 <div>ノートPC</div>
@@ -150,15 +151,20 @@ const SecondTowerFiveFloor = () => {
       </div>
       <div className={`w-1/3 pr-[30px] mr-[80px] pt-[20px] flex-col`}>
         <div
-          className={`flex text-[40px] font-bold place-content-center h-[60px] mb-[10px]`}
+          className={`flex text-[40px] font-bold h-[60px] mb-[10px] ml-[130px]`}
         >
           {room}
         </div>
-        <img
-          src="../../images/projector.png"
-          alt="projector"
-          className={`object-contain flex`}
-        />
+
+        {/* プロジェクター */}
+        <div className={`w-[350px] text-lg`}>
+          {room && <DatePicker room={room} />}
+          <img
+            src="../../images/projector.png"
+            alt="projector"
+            className={`object-contain relative`}
+          />
+        </div>
       </div>
     </>
   );

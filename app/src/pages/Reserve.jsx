@@ -51,7 +51,7 @@ const Reserve = (props) => {
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "12"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -63,7 +63,7 @@ const Reserve = (props) => {
               2F
             </div>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "13"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -75,7 +75,7 @@ const Reserve = (props) => {
               3F
             </div>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "14"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -98,7 +98,7 @@ const Reserve = (props) => {
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "22"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -110,7 +110,7 @@ const Reserve = (props) => {
               2F
             </div>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "23"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -122,7 +122,7 @@ const Reserve = (props) => {
               3F
             </div>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "24"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -136,7 +136,7 @@ const Reserve = (props) => {
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "25"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -148,7 +148,7 @@ const Reserve = (props) => {
               5F
             </div>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "26"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -173,7 +173,7 @@ const Reserve = (props) => {
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "32"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -185,7 +185,7 @@ const Reserve = (props) => {
               2F
             </div>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "33"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -197,7 +197,7 @@ const Reserve = (props) => {
               3F
             </div>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "34"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -211,7 +211,7 @@ const Reserve = (props) => {
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "35"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -223,7 +223,7 @@ const Reserve = (props) => {
               5F
             </div>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "36"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
@@ -235,7 +235,7 @@ const Reserve = (props) => {
               6F
             </div>
             <div
-              className={`w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "37"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
                   : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"

@@ -1,4 +1,5 @@
 import React from "react";
+import DatePicker from "../../DatePicker";
 
 const ThirdTowerTwoFloor = () => {
   const [room, setRoom] = React.useState("");
@@ -84,7 +85,7 @@ const ThirdTowerTwoFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3201"
-                    className={`w-[130px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
+                    className={`cursor-pointer w-[130px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
                     <div>3201</div>
                     <div>ノートPC</div>
@@ -95,7 +96,7 @@ const ThirdTowerTwoFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3202"
-                    className={`w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
+                    className={`cursor-pointer w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
                     <div>3202</div>
                     <div>ノートPC</div>
@@ -106,7 +107,7 @@ const ThirdTowerTwoFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3203"
-                    className={`w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
+                    className={`cursor-pointer w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
                     <div>3203</div>
                     <div>ノートPC</div>
@@ -120,15 +121,20 @@ const ThirdTowerTwoFloor = () => {
       </div>
       <div className={`w-1/3 pr-[30px] mr-[80px] pt-[20px] flex-col`}>
         <div
-          className={`flex text-[40px] font-bold place-content-center h-[60px] mb-[10px]`}
+          className={`flex text-[40px] font-bold h-[60px] mb-[10px] ml-[130px]`}
         >
           {room}
         </div>
-        <img
-          src="../../images/projector.png"
-          alt="projector"
-          className={`object-contain flex`}
-        />
+
+        {/* プロジェクター */}
+        <div className={`w-[350px] text-lg`}>
+          {room && <DatePicker room={room} />}
+          <img
+            src="../../images/projector.png"
+            alt="projector"
+            className={`object-contain relative`}
+          />
+        </div>
       </div>
     </>
   );

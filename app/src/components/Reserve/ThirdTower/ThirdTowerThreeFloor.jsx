@@ -85,7 +85,7 @@ const ThirdTowerThreeFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3301"
-                    className={`w-[130px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
+                    className={`cursor-pointer w-[130px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
                     <div>3301</div>
                     <div>ノートPC</div>
@@ -96,7 +96,7 @@ const ThirdTowerThreeFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3302"
-                    className={`w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
+                    className={`cursor-pointer w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
                     <div>3302</div>
                     <div>ノートPC</div>
@@ -107,7 +107,7 @@ const ThirdTowerThreeFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3303"
-                    className={`w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
+                    className={`cursor-pointer w-[130px] border-2 border-black hover:bg-gray-200 m-0.5 py-[40px]`}
                   >
                     <div>3303</div>
                     <div>ノートPC</div>
@@ -121,17 +121,14 @@ const ThirdTowerThreeFloor = () => {
       </div>
       <div className={`w-1/3 pr-[30px] mr-[80px] pt-[20px] flex-col`}>
         <div
-          className={`flex text-[40px] font-bold place-content-center h-[60px] mb-[10px]`}
+          className={`flex text-[40px] font-bold h-[60px] mb-[10px] ml-[130px]`}
         >
           {room}
         </div>
-        <div className={`w-[350px]`}>
-          <div className={`absolute z-10 mx-[25px] mt-16 w-[300px] flex-col`}>
-            <div className={`flex-col justify-center`}>
-              <DatePicker />
-              <div className={`flex`}>開始時間</div>
-            </div>
-          </div>
+
+        {/* プロジェクター */}
+        <div className={`w-[350px] text-lg`}>
+          {room && <DatePicker room={room} />}
           <img
             src="../../images/projector.png"
             alt="projector"

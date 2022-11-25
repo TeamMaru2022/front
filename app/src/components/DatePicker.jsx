@@ -39,7 +39,7 @@ const Com_DatePicker = (props) => {
   };
 
   // end時間のhour
-  const [endHour, setEndHour] = React.useState(9);
+  const [endHour, setEndHour] = React.useState(8);
 
   const endhandleChange = (e) => {
     setEndHour(e.target.value);

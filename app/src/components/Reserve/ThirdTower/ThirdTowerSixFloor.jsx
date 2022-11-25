@@ -1,4 +1,5 @@
 import React from "react";
+import DatePicker from "../../DatePicker";
 
 const ThirdTowerSixFloor = () => {
   const [room, setRoom] = React.useState("");
@@ -84,7 +85,7 @@ const ThirdTowerSixFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3601"
-                    className={`w-[195px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[60px]`}
+                    className={`cursor-pointer w-[195px]  border-2 border-black hover:bg-gray-200 m-0.5 py-[60px]`}
                   >
                     <div>3601</div>
                     <div>実習室</div>
@@ -94,7 +95,7 @@ const ThirdTowerSixFloor = () => {
                     onMouseEnter={Hover_room}
                     onMouseLeave={Leave_room}
                     id="3602"
-                    className={`w-[195px] border-2 border-black hover:bg-gray-200 m-0.5 py-[60px]`}
+                    className={`cursor-pointer w-[195px] border-2 border-black hover:bg-gray-200 m-0.5 py-[60px]`}
                   >
                     <div>3602</div>
                     <div>実習室</div>
@@ -107,15 +108,20 @@ const ThirdTowerSixFloor = () => {
       </div>
       <div className={`w-1/3 pr-[30px] mr-[80px] pt-[20px] flex-col`}>
         <div
-          className={`flex text-[40px] font-bold place-content-center h-[60px] mb-[10px]`}
+          className={`flex text-[40px] font-bold h-[60px] mb-[10px] ml-[130px]`}
         >
           {room}
         </div>
-        <img
-          src="../../images/projector.png"
-          alt="projector"
-          className={`object-contain flex`}
-        />
+
+        {/* プロジェクター */}
+        <div className={`w-[350px] text-lg`}>
+          {room && <DatePicker room={room} />}
+          <img
+            src="../../images/projector.png"
+            alt="projector"
+            className={`object-contain relative`}
+          />
+        </div>
       </div>
     </>
   );
