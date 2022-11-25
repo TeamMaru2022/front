@@ -7,7 +7,7 @@ const FirstTowerThreeFloor = () => {
       <div className={`w-[345px] h-100%`}>
         <Load room="1300" />
         <div className={`flex-row text-center`}>
-          <div className={`flex border-2 border-black`}>
+          <div className={`flex border-2 border-gray-400 text-lg`}>
             <div className={`flex-col w-[90px]`}>
               <div
                 id="1305"
@@ -40,11 +40,11 @@ const FirstTowerThreeFloor = () => {
             </div>
             <div className={`flex-col w-[160px]`}>
               <div
-                className={`w-[90px] h-[90px] mx-auto border-2 border-black m-1 flex`}
+                className={`w-[90px] h-[90px] mx-auto border-2 border-gray-500 text-gray-700 text-base m-1 flex`}
               >
                 <div className={`w-[44px]`}>WC（男）</div>
                 <div
-                  className={`w-[44px] h-[65px] border-l-2 border-b-2 border-black`}
+                  className={`w-[44px] h-[65px] border-l-2 border-b-2 border-gray-500 text-gray-700 text-base`}
                 >
                   WC（女）
                 </div>
@@ -61,7 +61,7 @@ const FirstTowerThreeFloor = () => {
             <div className={`flex-col w-[90px]`}>
               <div
                 id="1301"
-                className={`h-[88px] border-2 border-black mx-0.5 mt-0.5 py-[10px] flex-col`}
+                className={`h-[88px] border-2 border-black mx-0.5 mt-0.5 flex-col`}
               >
                 <div>1301</div>
                 <div>ノートPC</div>
@@ -69,7 +69,7 @@ const FirstTowerThreeFloor = () => {
               </div>
               <div
                 id="1302"
-                className={`h-[88px] border-x-2 border-b-2 border-black mx-0.5 py-[10px] flex-col`}
+                className={`h-[88px] border-x-2 border-b-2 border-black mx-0.5 flex-col`}
               >
                 <div>1302</div>
                 <div>ノートPC</div>
@@ -77,7 +77,7 @@ const FirstTowerThreeFloor = () => {
               </div>
               <div
                 id="1303"
-                className={`h-[88px] border-x-2 border-black mx-0.5 py-[10px] flex-col`}
+                className={`h-[88px] border-x-2 border-black mx-0.5 flex-col`}
               >
                 <div>1303</div>
                 <div>ノートPC</div>
@@ -85,7 +85,7 @@ const FirstTowerThreeFloor = () => {
               </div>
               <div
                 id="1304"
-                className={`h-[88px] border-2 border-black mx-0.5 mb-0.5 py-[10px] flex-col`}
+                className={`h-[88px] border-2 border-black mx-0.5 mb-0.5 flex-col`}
               >
                 <div>1304</div>
                 <div>ノートPC</div>

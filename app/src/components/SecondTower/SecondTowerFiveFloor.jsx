@@ -8,30 +8,30 @@ const SecondTowerFiveFloor = () => {
       <div className={`flex flex-row text-center`}>
         {/*  */}
         <div
-          className={`flex flex-row w-[280px] border-y-2 border-l-2 border-black`}
+          className={`flex flex-row w-[280px] border-y-2 border-l-2 border-gray-400 text-lg`}
         >
           <div className={`flex-col `}>
             <div
               id="2503"
-              className={`w-[120px] h-[115px] border-2 border-black mt-0.5 ml-0.5 py-[5px] flex-col`}
+              className={`w-[120px] h-[115px] border-2 border-black mt-0.5 ml-0.5 flex-col`}
             >
               <div>2503</div>
               <div>デッサン教室</div>
-              <div>（ノートPC</div>
-              <div>対応教室）</div>
+              <div>ノートPC</div>
+              <div>対応教室</div>
             </div>
             <div
               id="2504"
-              className={`w-[120px] h-[115px] border-x-2 border-black ml-0.5 py-[5px] flex-col`}
+              className={`w-[120px] h-[115px] border-x-2 border-black ml-0.5 flex-col`}
             >
               <div>2504</div>
               <div>デッサン教室</div>
-              <div>（ノートPC</div>
-              <div>対応教室）</div>
+              <div>ノートPC</div>
+              <div>対応教室</div>
             </div>
             <div
               id="2505"
-              className={`w-[120px] h-[130px] border-2 border-black mb-0.5 ml-0.5 px-2 py-[32px]`}
+              className={`w-[120px] h-[130px] border-2 border-black mb-0.5 ml-0.5 px-2 py-[20px]`}
             >
               <div>2505</div>
               <div>ノートPC</div>
@@ -59,10 +59,10 @@ const SecondTowerFiveFloor = () => {
         </div>
         <div className={`flex-col`}>
           <div
-            className={`w-[80px] h-[120px] border-l-2 border-b-2 border-black px-2`}
+            className={`w-[80px] h-[120px] border-l-2 border-b-2 border-gray-400 px-2`}
           ></div>
           <div
-            className={`w-[80px] h-[248px] border-r-2 border-b-2 border-black flex justify-between`}
+            className={`w-[80px] h-[248px] border-r-2 border-b-2 border-gray-400 flex justify-between`}
           >
             <div className={`w-[40px] h-[252px]`}>
               <img
@@ -73,22 +73,22 @@ const SecondTowerFiveFloor = () => {
             </div>
             <div className={`w-[33px] flex-col mr-0.5`}>
               <div
-                className={`w-[33px] h-[51px] border-2 border-black mt-0.5 mr-0.5`}
+                className={`w-[33px] h-[51px] border-2 border-gray-500 text-gray-700 text-base mt-0.5 mr-0.5`}
               >
                 WC (女)
               </div>
               <div
-                className={`w-[33px] h-[47px] border-x-2 border-black mr-0.5`}
+                className={`w-[33px] h-[47px] border-x-2 border-gray-500 text-gray-700 text-base mr-0.5`}
               >
                 WC (男)
               </div>
               <div
-                className={`w-[33px] h-[29.5px] border-2 border-black mr-0.5`}
+                className={`w-[33px] h-[29.5px] border-2 border-gray-500 text-gray-700 text-base mr-0.5`}
               >
                 EV
               </div>
               <div
-                className={`w-[33px] h-[115px] border-x-2 border-b-2 border-black mr-0.5 mb-0.5`}
+                className={`w-[33px] h-[115px] border-x-2 border-b-2 border-gray-500 text-gray-700 text-base mr-0.5 mb-0.5`}
               ></div>
             </div>
           </div>

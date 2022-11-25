@@ -1,28 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import FirstTowerFourFloor from "../components/FirstTower/FirstTowerFourFloor";
-import FirstTowerThreeFloor from "../components/FirstTower/FirstTowerThreeFloor";
-import FirstTowerTwoFloor from "../components/FirstTower/FirstTowerTwoFloor";
-import SecondTowerTwoFloor from "../components/SecondTower/SecondTowerTwoFloor";
-import SecondTowerThreeFloor from "../components/SecondTower/SecondTowerThreeFloor";
-import SecondTowerFourFloor from "../components/SecondTower/SecondTowerFourFloor";
-import SecondTowerFiveFloor from "../components/SecondTower/SecondTowerFiveFloor";
-import SecondTowerSixFloor from "../components/SecondTower/SecondTowerSixFloor";
-import ThirdTowerTwoFloor from "../components/ThirdTower/ThirdTowerTwoFloor";
-import ThirdTowerThreeFloor from "../components/ThirdTower/ThirdTowerThreeFloor";
-import ThirdTowerFourFloor from "../components/ThirdTower/ThirdTowerFourFloor";
-import ThirdTowerFiveFloor from "../components/ThirdTower/ThirdTowerFiveFloor";
-import ThirdTowerSixFloor from "../components/ThirdTower/ThirdTowerSixFloor";
-import ThirdTowerSevenFloor from "../components/ThirdTower/ThirdTowerSevenFloor";
-import ReserveClass from "../components/ReserveClass";
+import FirstTowerFourFloor from "../components/Reserve/FirstTower/FirstTowerFourFloor";
+import FirstTowerThreeFloor from "../components/Reserve/FirstTower/FirstTowerThreeFloor";
+import FirstTowerTwoFloor from "../components/Reserve/FirstTower/FirstTowerTwoFloor";
+import SecondTowerTwoFloor from "../components/Reserve/SecondTower/SecondTowerTwoFloor";
+import SecondTowerThreeFloor from "../components/Reserve/SecondTower/SecondTowerThreeFloor";
+import SecondTowerFourFloor from "../components/Reserve/SecondTower/SecondTowerFourFloor";
+import SecondTowerFiveFloor from "../components/Reserve/SecondTower/SecondTowerFiveFloor";
+import SecondTowerSixFloor from "../components/Reserve/SecondTower/SecondTowerSixFloor";
+import ThirdTowerTwoFloor from "../components/Reserve/ThirdTower/ThirdTowerTwoFloor";
+import ThirdTowerThreeFloor from "../components/Reserve/ThirdTower/ThirdTowerThreeFloor";
+import ThirdTowerFourFloor from "../components/Reserve/ThirdTower/ThirdTowerFourFloor";
+import ThirdTowerFiveFloor from "../components/Reserve/ThirdTower/ThirdTowerFiveFloor";
+import ThirdTowerSixFloor from "../components/Reserve/ThirdTower/ThirdTowerSixFloor";
+import ThirdTowerSevenFloor from "../components/Reserve/ThirdTower/ThirdTowerSevenFloor";
 
 const Reserve = (props) => {
   // floor: 何号館何階かを保持する変数
   const [floor, setFloor] = React.useState("12");
-
-  // tower: 何号館かを保持する変数
-  const [tower, setTower] = React.useState("1");
 
   return (
     <>
@@ -31,64 +27,61 @@ const Reserve = (props) => {
           <a href="/" className={`w-[150px]`}>
             <img src="./images/logo.png" alt="KitAru" className={`px-3`} />
           </a>
-          {/* <div className="mx-3 px-4 pt-2  rounded-lg hover:translate-y-0.5 hover:bg-gray-200 hover:border-b-2 hover:border-gray-300 transform transition">
-            予約申請ページ
-          </div> */}
-          <div className="mx-3 px-4 pt-2">予約申請</div>
-          <div><Link to="../timetable">時間割</Link></div>
+          <Link className={`mx-3 px-4 pt-2`} to="../reserveTop">
+            予約Topページ
+          </Link>
+          <Link className={`mx-3 px-4 pt-2`} to="../reserve">
+            予約申請
+          </Link>
+          {/* <Link className={`mx-3 px-4 pt-2`} to="../timetable">
+            時間割
+          </Link> */}
         </div>
       </header>
 
-      <div className={`flex justify-around pt-20`}>
+      <div className={`flex justify-around pt-10`}>
         {/* １号館 */}
         <div
-          className={`flex flex-col border-2 m-3 text-center bg-[#F4F5F5] w-1/3 p-2`}
+          className={`flex flex-col border-2 m-3 mx-4 text-center bg-[#F4F5F5] w-1/3 p-2`}
         >
           <div
-            className={`w-100% border-2 border-black m-1 text-xl font-bold ${
-              tower === "1"
-                ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                : "text-[#7FD4FF] bg-[#FFFFFF]"
-            } `}
+            className={`w-100% border-[#F4F5F5] text-[#66aacc] text-2xl font-bold`}
           >
             １号館
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "12"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "12");
-                setTower((tower) => "1");
               }}
             >
               2F
             </div>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "13"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "13");
-                setTower((tower) => "1");
               }}
             >
               3F
             </div>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "14"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "14");
-                setTower((tower) => "1");
               }}
             >
               4F
@@ -98,53 +91,44 @@ const Reserve = (props) => {
 
         {/* ２号館 */}
         <div
-          className={`flex flex-col border-2 m-3 text-center bg-[#F4F5F5] w-1/3 p-2`}
+          className={`flex flex-col border-2 m-3 mx-4 text-center bg-[#F4F5F5] w-1/3 p-2`}
         >
-          <div
-            className={`w-100% border-2 border-black m-1 text-xl font-bold ${
-              tower === "2"
-                ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                : "text-[#7FD4FF] bg-[#FFFFFF]"
-            } `}
-          >
+          <div className={`w-100% text-[#66aacc] text-2xl font-bold`}>
             ２号館
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "22"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "22");
-                setTower((tower) => "2");
               }}
             >
               2F
             </div>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "23"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "23");
-                setTower((tower) => "2");
               }}
             >
               3F
             </div>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "24"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "24");
-                setTower((tower) => "2");
               }}
             >
               4F
@@ -152,27 +136,25 @@ const Reserve = (props) => {
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "25"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "25");
-                setTower((tower) => "2");
               }}
             >
               5F
             </div>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "26"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "26");
-                setTower((tower) => "2");
               }}
             >
               6F
@@ -182,53 +164,46 @@ const Reserve = (props) => {
         </div>
         {/* ３号館 */}
         <div
-          className={`flex flex-col border-2 m-3 text-center bg-[#F4F5F5] w-1/3 p-2`}
+          className={`flex flex-col border-2 m-3 mx-4 text-center bg-[#F4F5F5] w-1/3 p-2`}
         >
           <div
-            className={`w-100% border-2 border-black m-1 text-xl font-bold ${
-              tower === "3"
-                ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                : "text-[#7FD4FF] bg-[#FFFFFF]"
-            } `}
+            className={`w-100% text-[#66aacc] text-2xl font-bold`}
           >
             ３号館
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "32"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "32");
-                setTower((tower) => "3");
               }}
             >
               2F
             </div>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "33"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "33");
-                setTower((tower) => "3");
               }}
             >
               3F
             </div>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "34"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "34");
-                setTower((tower) => "3");
               }}
             >
               4F
@@ -236,40 +211,37 @@ const Reserve = (props) => {
           </div>
           <div className={`flex`}>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "35"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "35");
-                setTower((tower) => "3");
               }}
             >
               5F
             </div>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "36"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "36");
-                setTower((tower) => "3");
               }}
             >
               6F
             </div>
             <div
-              className={`w-1/3 border-2 border-black m-1 text-2xl font-bold ${
+              className={`cursor-pointer w-1/3 border-2 border-black drop-shadow-lg m-1 text-3xl font-bold ${
                 floor === "37"
                   ? "text-[#FFFFFF] bg-[#7FD4FF]"
-                  : "text-[#7FD4FF] bg-[#FFFFFF]"
+                  : "text-[#7FD4FF] bg-[#FFFFFF] hover:translate-y-0.5 hover:bg-gray-100 transform transition"
               }`}
               onClick={() => {
                 setFloor((floor) => "37");
-                setTower((tower) => "3");
               }}
             >
               7F
@@ -277,8 +249,8 @@ const Reserve = (props) => {
           </div>
         </div>
       </div>
-      <div className={`flex justify-around pt-14`}>
-        <div className={`flex place-content-center my-8 w-3/5`}>
+      <div className={`flex justify-around pt-10`}>
+        {/* <div className={`flex place-content-center my-8 w-3/5`}> */}
           {floor === "12" && <FirstTowerTwoFloor />}
           {floor === "13" && <FirstTowerThreeFloor />}
           {floor === "14" && <FirstTowerFourFloor />}
@@ -293,10 +265,14 @@ const Reserve = (props) => {
           {floor === "35" && <ThirdTowerFiveFloor />}
           {floor === "36" && <ThirdTowerSixFloor />}
           {floor === "37" && <ThirdTowerSevenFloor />}
-        </div>
-        <div className={`flex mt-8 w-2/5 text-xl mb-8`}>
-          <ReserveClass room={floor} />
-        </div>
+        {/* </div>
+        <div className={`w-1/3 pr-[100px] pt-[30px]`}>
+          <img
+            src="../../images/projector.png"
+            alt="projector"
+            className={`object-contain`}
+          />
+        </div> */}
       </div>
     </>
   );

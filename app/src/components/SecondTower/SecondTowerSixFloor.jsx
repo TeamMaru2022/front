@@ -8,7 +8,7 @@ const SecondTowerSixFloor = () => {
       <div className={`flex flex-row text-center`}>
         {/*  */}
         <div
-          className={`flex flex-row w-[280px] border-y-2 border-l-2 border-black`}
+          className={`flex flex-row w-[280px] border-y-2 border-l-2 border-gray-400 text-lg`}
         >
           <div className={`flex-col`}>
             <div className={`flex h-[200px]`}>
@@ -42,10 +42,10 @@ const SecondTowerSixFloor = () => {
         </div>
         <div className={`flex-col`}>
           <div
-            className={`w-[80px] h-[120px] border-l-2 border-b-2 border-black px-2`}
+            className={`w-[80px] h-[120px] border-l-2 border-b-2 border-gray-400 px-2`}
           ></div>
           <div
-            className={`w-[80px] h-[248px] border-r-2 border-b-2 border-black flex justify-between`}
+            className={`w-[80px] h-[248px] border-r-2 border-b-2 border-gray-400 flex justify-between`}
           >
             <div className={`w-[40px] h-[252px]`}>
               <img
@@ -56,22 +56,22 @@ const SecondTowerSixFloor = () => {
             </div>
             <div className={`w-[33px] flex-col mr-0.5`}>
               <div
-                className={`w-[33px] h-[51px] border-2 border-black mt-0.5 mr-0.5`}
+                className={`w-[33px] h-[51px] border-2 border-gray-500 mt-0.5 mr-0.5`}
               >
                 WC (女)
               </div>
               <div
-                className={`w-[33px] h-[47px] border-x-2 border-black mr-0.5`}
+                className={`w-[33px] h-[47px] border-x-2 border-gray-500 mr-0.5`}
               >
                 WC (男)
               </div>
               <div
-                className={`w-[33px] h-[29.5px] border-2 border-black mr-0.5`}
+                className={`w-[33px] h-[29.5px] border-2 border-gray-500 mr-0.5`}
               >
                 EV
               </div>
               <div
-                className={`w-[33px] h-[115px] border-x-2 border-b-2 border-black mr-0.5 mb-0.5`}
+                className={`w-[33px] h-[115px] border-x-2 border-b-2 border-gray-500 mr-0.5 mb-0.5`}
               ></div>
             </div>
           </div>
