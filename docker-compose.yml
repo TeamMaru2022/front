@@ -8,6 +8,6 @@ services:
       - CHOKIDAR_USEPOLLING=true
     volumes:
       - ./:/usr/src/app
-    command: sh -c "cd app && yarn start"
+    command: sh -c "cd app && yarn && yarn start"
     ports:
       - "3000:3000"
