@@ -11,7 +11,6 @@ const Load = (props) => {
     .then((data) => {
 
       var period = String(data["TimerInfo"]); //今何限目か示す変数
-      console.log(data);
 
       // n号館n階の教室数をlenに代入
       var len = Object.keys(data["NormalInfo"]).length;
@@ -28,6 +27,7 @@ const Load = (props) => {
         for (let j = 0; j < period_sum; j++) {
           if (data["NormalInfo"][room_num][j]["TimeNo"] === period) {
             if (!(data["NormalInfo"][room_num][j]["SubjectName"] === "")) {
+              // 教室の色を変更
               Usage_situation(room_num);
             }
           }

@@ -6,6 +6,7 @@ import SecondTowerFourFloor from "../components/SecondTower/SecondTowerFourFloor
 import SecondTowerFiveFloor from "../components/SecondTower/SecondTowerFiveFloor";
 import SecondTowerSixFloor from "../components/SecondTower/SecondTowerSixFloor";
 import FloorMapMobile from "../components/FloorMapMobile";
+import Reserve from "../components/function/Reserve";
 
 const SecondTower = () => {
   const [floor, setFloor] = React.useState(2);
@@ -76,21 +77,7 @@ const SecondTower = () => {
                 >
                   ２号館の予約一覧
                 </div>
-                <div
-                  className={`text-center text-2xl my-2`}
-                >
-                  【2301】  17:30～18:30
-                </div>
-                <div
-                  className={`text-center text-2xl my-2`}
-                >
-                  【2404】 18:30～19:30
-                </div>
-                <div
-                  className={`text-center text-2xl my-2`}
-                >
-                  【2302】  9:30～10:30
-                </div>
+                <Reserve tower="2" />
               </div>
             </div>
             <div className={`w-[425px] h-auto relative flex place-items-end justify-center py-10`}>

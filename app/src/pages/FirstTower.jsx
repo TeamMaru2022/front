@@ -4,6 +4,7 @@ import FirstTowerFourFloor from "../components/FirstTower/FirstTowerFourFloor";
 import FirstTowerThreeFloor from "../components/FirstTower/FirstTowerThreeFloor";
 import FirstTowerTwoFloor from "../components/FirstTower/FirstTowerTwoFloor";
 import FloorMapMobile from "../components/FloorMapMobile";
+import Reserve from "../components/function/Reserve";
 
 const FirstTower = () => {
   // floor：選択している階数を保持する変数（初期値：２）
@@ -18,10 +19,7 @@ const FirstTower = () => {
             max750 ? `p-3` : `p-3`
           } border-b-2 text-xl font-medium flex bg-white `}
         >
-          <a
-            href="/"
-            className={`${max750 ? `w-1/5` : `w-[150px]`}`}
-          >
+          <a href="/" className={`${max750 ? `w-1/5` : `w-[150px]`}`}>
             <img src="./images/logo.png" alt="KitAru" className={`px-3`} />
           </a>
           {max750 ? (
@@ -70,12 +68,13 @@ const FirstTower = () => {
                 ></div>
                 <div className={`text-lg`}>・・・利用中</div>
               </div>
-              <div className={` mt-8 flex place-content-center`}>
+              <div className={` mt-8 flex-col place-content-center`}>
                 <div
-                  className={`text-[#FF8093] text-2xl font-bold border-b-2 border-[#FF8093]`}
+                  className={`text-[#FF8093] text-2xl font-bold border-b-2 border-[#FF8093] text-center`}
                 >
                   １号館の予約一覧
                 </div>
+                <Reserve tower="1" />
               </div>
             </div>
             <div

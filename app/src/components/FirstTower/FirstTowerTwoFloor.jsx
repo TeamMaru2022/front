@@ -1,5 +1,5 @@
 import React from "react";
-import Load from "../Load";
+import Load from "../function/Load";
 
 const FirstTowerTwoFloor = () => {
   return (

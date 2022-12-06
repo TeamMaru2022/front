@@ -7,6 +7,7 @@ import ThirdTowerFiveFloor from "../components/ThirdTower/ThirdTowerFiveFloor";
 import ThirdTowerSixFloor from "../components/ThirdTower/ThirdTowerSixFloor";
 import ThirdTowerSevenFloor from "../components/ThirdTower/ThirdTowerSevenFloor";
 import FloorMapMobile from "../components/FloorMapMobile";
+import Reserve from "../components/function/Reserve";
 
 const ThirdTower = () => {
   const [floor, setFloor] = React.useState(2);
@@ -72,12 +73,13 @@ const ThirdTower = () => {
                 ></div>
                 <div className={`text-lg`}>・・・利用中</div>
               </div>
-              <div className={` mt-8 flex place-content-center`}>
+              <div className={` mt-8 flex-col place-content-center`}>
                 <div
-                  className={`text-[#FF8093] text-2xl font-bold border-b-2 border-[#FF8093]`}
+                  className={`text-[#FF8093] text-2xl font-bold border-b-2 border-[#FF8093] text-center`}
                 >
                   ３号館の予約一覧
                 </div>
+                <Reserve tower="3" />
               </div>
             </div>
 
