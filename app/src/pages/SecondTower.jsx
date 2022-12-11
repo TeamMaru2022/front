@@ -80,7 +80,7 @@ const SecondTower = () => {
                 <Reserve tower="2" />
               </div>
             </div>
-            <div className={`w-[425px] h-auto relative flex place-items-end justify-center py-10`}>
+            <div className={`w-[425px] h-[542px] relative flex place-items-end justify-center mt-10`}>
               <img
                 src="./images/SecondTower_bg.png"
                 alt="2号館"

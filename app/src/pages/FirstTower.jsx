@@ -78,7 +78,7 @@ const FirstTower = () => {
               </div>
             </div>
             <div
-              className={`w-[510px] h-auto mt-[20px] relative flex place-items-end justify-center`}
+              className={`w-[510px] h-[505px] mt-[30px] relative flex place-items-end justify-center`}
             >
               <img
                 src="./images/FirstTower_bg.png"
