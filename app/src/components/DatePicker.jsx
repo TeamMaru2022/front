@@ -45,15 +45,20 @@ const Com_DatePicker = (props) => {
     setEndHour(e.target.value);
   };
 
-  const SetEndHour = (run) => {
-    return run();
-  };
-
   // endt時間のminite
   const [endMin, setEndMin] = React.useState(0);
 
   const endMinhandleChange = (e) => {
     setEndMin(e.target.value);
+  };
+
+  // 開始時間、終了時間のドロップダウンを表示するためのfunction
+  const runFunction = (run) => {
+    if (startHour > endHour) {
+      setEndHour(startHour);
+    }
+
+    return run();
   };
 
   // 申請ダイアログのmessage
@@ -63,23 +68,78 @@ const Com_DatePicker = (props) => {
   const [dialog, setDialog] = React.useState(false);
 
   const dialoghandleChange = () => {
-    setMsg("この内容で申請しますか？");
     setDialog(!dialog);
+  };
+
+  // 申請ダイアログで時間表示用の変数
+  const [showstart, setShowStart] = React.useState();
+  const [showend, setShowEnd] = React.useState();
+
+  // 時間設定があってるか判定
+  const [time, setTime] = React.useState();
+  const checktime = () => {
+    setTime(
+      ("0" + startHour).slice(-2) + ("0" + startMin).slice(-2) >=
+        ("0" + endHour).slice(-2) + ("0" + endMin).slice(-2)
+    );
+    setShowStart(
+      ("0" + startHour).slice(-2) + ":" + ("0" + startMin).slice(-2)
+    );
+    setShowEnd(("0" + endHour).slice(-2) + ":" + ("0" + endMin).slice(-2));
+    setMsg("下記の内容で受け付けました。");
   };
 
   // 申請結果ダイアログ
   const [result, setResult] = React.useState(false);
 
+  // postしたときにデータを入れるための変数
+  const [message, setMessage] = React.useState();
+  // 予約データをサーバに送る処理
   const resulthandleChange = (flg) => {
-    setMsg("下記の内容で受け付けました。");
-    setResult(flg);
+    let url = "http://localhost:4000/reservation/rese";
+
+    // postで送るデータ
+    const param = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        room_no: room,
+        rese_date: format(startDate, "yyyy-MM-dd"),
+        s_time: showstart,
+        e_time: showend,
+      }),
+    };
+    // postで帰ってきたデータをsetMessageでmessageに入れてる
+    fetch(url, param)
+      .then((response) => response.json())
+      .then((data) => setMessage(data));
+    return message;
+  };
+
+  // "はい(申請する)"ボタンを押した時
+  // back-endにpost送信
+  const postReservation = () => {
+    // messageが0：時間にかぶりがある
+    // messageが1：予約完了
+    const message = resulthandleChange();
+    if (message["message"] === "1") {
+      setMsg("下記の内容で受け付けました。");
+    } else if (message["message"] === "0") {
+      setMsg("下記の時間に予約が入っています。");
+      setShowStart(message["startTime"].slice(0, 5));
+      setShowEnd(message["endTime"].slice(0, 5));
+    }
+    console.log(message);
+
+    setResult(true);
   };
 
   // roomを保持して、変化したらダイアログを変える
   const [room, setRoom] = React.useState();
   if (room !== props.room) {
     // msgとdialog, resultのflagを初期化
-    // setMsg("この内容で申請しますか？");
     setDialog(false);
     setResult(false);
     setRoom(props.room);
@@ -91,56 +151,86 @@ const Com_DatePicker = (props) => {
         <div className={`flex-col justify-center`}>
           {dialog ? (
             <>
-              {/* 申請内容確認ダイアログ */}
-              <div className={`flex flex-col`}>
-                <div className={`text-center text-lg font-semibold pb-2`}>
-                  {msg}
-                </div>
-                <div className={`flex flex-row pt-2 pb-2 pl-8 font-semibold`}>
-                  <div className={`pt-[1px]`}>日時：</div>
-                  <div className={`text-lg`}>
-                    {format(startDate, "yyyy/MM/d")}　{startHour}:
-                    {("0" + startMin).slice(-2)} - {endHour}:
-                    {("0" + endMin).slice(-2)}
-                  </div>
-                </div>
-                <div className={`flex flex-row py-2 pl-8 font-semibold`}>
-                  <div className={`pt-[1px]`}>教室：</div>
-                  <div className={`text-lg`}>{props.room}</div>
-                </div>
-                <div
-                  className={`flex flex-row justify-around text-sm font-bold py-3 px-9`}
-                >
-                  {result ? (
-                    <>
-                      <Link
-                        className={`flex px-6 cursor-pointer rounded-md drop-shadow-lg border-black bg-[#c6ecff] hover:bg-[#a5e1ff] border-2`}
-                        to="../reserveTop"
-                      >
-                        Top
-                      </Link>
-                    </>
-                  ) : (
-                    <>
+              {/* {() => console.log(time)} */}
+              {/* 時間設定があってるか判定 */}
+              {time ? (
+                <>
+                  {/* 時間設定が間違っているときのダイアログ */}
+                  <div className={`flex flex-col my-[30px]`}>
+                    <div className={`text-center text-lg font-semibold pb-2`}>
+                      時間指定が間違っています。
+                    </div>
+                    <div
+                      className={`flex flex-row-reverse text-sm font-bold py-9 px-9`}
+                    >
                       <div
-                        className={`flex px-6 cursor-pointer rounded-md drop-shadow-lg border-black bg-[#c6ecff] hover:bg-[#a5e1ff] border-2`}
-                        onClick={() => resulthandleChange(true)}
+                        className={`flex w-[80px] px-6 cursor-pointer rounded-md drop-shadow-lg border-black border-2 bg-[#FFFFFF] hover:bg-[#E5E7EB]`}
+                        onClick={() => {
+                          dialoghandleChange();
+                        }}
                       >
-                        はい
+                        戻る
                       </div>
-                    </>
-                  )}
-
-                  <div
-                    className={`flex px-6 cursor-pointer rounded-md drop-shadow-lg border-black border-2 bg-[#FFFFFF] hover:bg-[#E5E7EB]`}
-                    onClick={() => {
-                      dialoghandleChange();
-                    }}
-                  >
-                    戻る
+                    </div>
                   </div>
-                </div>
-              </div>
+                </>
+              ) : (
+                <>
+                  {/* 申請内容確認ダイアログ */}
+                  <div className={`flex flex-col`}>
+                    <div className={`text-center text-lg font-semibold pb-2`}>
+                      {msg}
+                    </div>
+                    <div
+                      className={`flex flex-row pt-2 pb-2 pl-5 font-semibold`}
+                    >
+                      <div className={`pt-[1px]`}>日時：</div>
+                      <div className={`text-lg`}>
+                        {format(startDate, "yyyy/MM/dd")} {showstart} -{" "}
+                        {showend}
+                      </div>
+                    </div>
+                    <div className={`flex flex-row py-2 pl-5 font-semibold`}>
+                      <div className={`pt-[1px]`}>教室：</div>
+                      <div className={`text-lg`}>{props.room}</div>
+                    </div>
+                    <div
+                      className={`flex flex-row justify-around text-sm font-bold py-3 px-9`}
+                    >
+                      {result ? (
+                        <>
+                          <Link
+                            className={`flex px-6 cursor-pointer rounded-md drop-shadow-lg border-black bg-[#c6ecff] hover:bg-[#a5e1ff] border-2`}
+                            to="../reserveTop"
+                          >
+                            Top
+                          </Link>
+                        </>
+                      ) : (
+                        <>
+                          <div
+                            className={`flex px-6 cursor-pointer rounded-md drop-shadow-lg border-black bg-[#c6ecff] hover:bg-[#a5e1ff] border-2`}
+                            onClick={() => {
+                              postReservation();
+                            }}
+                          >
+                            はい
+                          </div>
+                        </>
+                      )}
+
+                      <div
+                        className={`flex px-6 cursor-pointer rounded-md drop-shadow-lg border-black border-2 bg-[#FFFFFF] hover:bg-[#E5E7EB]`}
+                        onClick={() => {
+                          dialoghandleChange();
+                        }}
+                      >
+                        戻る
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
             </>
           ) : (
             <>
@@ -179,65 +269,68 @@ const Com_DatePicker = (props) => {
               </div>
               <div className={`flex justify-around mt-[10px] px-2`}>
                 <div className={`flex`}>
+                  {/*
+                    開始時間：時
+                    19時まで選択可能
+                  */}
                   <select
                     className={`border-2 border-black cursor-pointer rounded-md`}
                     name="start_hour"
                     id="start_hour"
                     onChange={(e) => starthandleChange(e)}
+                    value={startHour}
                   >
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
+                    {runFunction(() => {
+                      const list = [];
+                      for (let i = 8; i < 20; i++) {
+                        list.push(
+                          <option value={i} key={i}>
+                            {("0" + i).slice(-2)}
+                          </option>
+                        );
+                      }
+                      return list;
+                    })}
                   </select>
                   <div className={`px-1`}>:</div>
+
+                  {/*
+                    開始時間：分
+                  */}
                   <select
                     className={`border-2 border-black cursor-pointer rounded-md`}
                     name="start_min"
                     id="start_min"
                     onChange={(e) => startMinhandleChange(e)}
+                    value={startMin}
                   >
-                    <option value="00">00</option>
-                    {startHour !== "20" && (
-                      <>
-                        <option value="5">05</option>
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                        <option value="55">55</option>
-                      </>
-                    )}
+                    {runFunction(() => {
+                      const list = [];
+                      for (let i = 0; i <= 55; i = i + 5) {
+                        list.push(
+                          <option value={i} key={i}>
+                            {("0" + i).slice(-2)}
+                          </option>
+                        );
+                      }
+                      return list;
+                    })}
                   </select>
                 </div>
 
                 <div>～</div>
                 <div className={`flex`}>
+                  {/* 終了時間：時 */}
                   <select
                     className={`border-2 border-black cursor-pointer rounded-md`}
                     name="end_hour"
                     id="end_hour"
                     onChange={(e) => endhandleChange(e)}
+                    value={endHour}
                   >
-                    {SetEndHour(() => {
-                      if (startHour > endHour) {
-                        setEndHour(startHour);
-                      }
+                    {runFunction(() => {
                       const list = [];
+                      // 開始時間：時から20時まで選択可能
                       for (let i = startHour; i <= 20; i++) {
                         list.push(
                           <option value={i} key={i}>
@@ -249,28 +342,30 @@ const Com_DatePicker = (props) => {
                     })}
                   </select>
                   <div className={`px-1`}>:</div>
+
+                  {/* 終了時間：分 */}
                   <select
                     className={`border-2 border-black cursor-pointer rounded-md`}
                     name="end_min"
                     id="end_min"
                     onChange={(e) => endMinhandleChange(e)}
+                    value={endMin}
                   >
-                    <option value="00">00</option>
-                    {endHour !== "20" && (
-                      <>
-                        <option value="5">05</option>
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                        <option value="55">55</option>
-                      </>
-                    )}
+                    {runFunction(() => {
+                      if (endHour === "20") {
+                        return <option value="00">00</option>;
+                      }
+                      const list = [];
+                      for (let i = 0; i <= 55; i = i + 5) {
+                        list.push(
+                          <option value={i} key={i}>
+                            {("0" + i).slice(-2)}
+                          </option>
+                        );
+                      }
+
+                      return list;
+                    })}
                   </select>
                 </div>
               </div>
@@ -315,8 +410,9 @@ const Com_DatePicker = (props) => {
                 <div
                   className={`flex px-4 pt-1 cursor-pointer font-bold text-sm rounded-md drop-shadow-lg border-black bg-[#c6ecff] hover:bg-[#a5e1ff] border-2`}
                   onClick={() => {
+                    checktime();
                     dialoghandleChange();
-                    resulthandleChange(false);
+                    setResult(false);
                     setMsg("この内容で申請しますか？");
                   }}
                 >

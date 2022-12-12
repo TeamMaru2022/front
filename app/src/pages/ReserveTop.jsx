@@ -15,9 +15,9 @@ const ReserveTop = (props) => {
           <Link className={`mx-3 px-4 pt-2`} to="../reserve">
             予約申請
           </Link>
-          {/* <Link className={`mx-3 px-4 pt-2`} to="../timetable">
+          <Link className={`mx-3 px-4 pt-2`} to="../timetable">
             時間割
-          </Link> */}
+          </Link>
         </div>
       </header>
 
