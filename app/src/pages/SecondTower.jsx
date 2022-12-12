@@ -82,7 +82,7 @@ const SecondTower = () => {
             </div>
             <div className={`w-[425px] h-[542px] relative flex place-items-end justify-center mt-10`}>
               <img
-                src="./images/SecondTower_bg.png"
+                src="./images/school_buildings/SecondTower_bg.png"
                 alt="2号館"
               />
               <div className={`absolute w-5/6 mb-[155px]`}>

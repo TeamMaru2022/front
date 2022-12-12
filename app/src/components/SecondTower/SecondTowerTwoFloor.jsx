@@ -52,7 +52,7 @@ const SecondTowerTwoFloor = () => {
             <div className={`w-[80px] h-[100px] flex justify-between`}>
               <img
                 className={`h-[103px] mt-0.5`}
-                src="./images/SecondTower_stairs.png"
+                src="./images/school_buildings/SecondTower_stairs.png"
                 alt="階段"
               />
               <div className={`flex-col mr-0.5`}>

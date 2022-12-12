@@ -74,7 +74,7 @@ const ThirdTowerSixFloor = () => {
                   >
                     <img
                       className={`p-0.5`}
-                      src="./images/ThirdTower_stairs.png"
+                      src="./images/school_buildings/ThirdTower_stairs.png"
                       alt="階段"
                     />
                   </div>
