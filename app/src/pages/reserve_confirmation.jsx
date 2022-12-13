@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ReserveTop = (props) => {
+const ReserveConfirmation = (props) => {
   return (
     <>
       <header className={`sticky z-50 top-0`}>
@@ -75,4 +75,4 @@ const ReserveTop = (props) => {
   );
 };
 
-export default ReserveTop;
+export default ReserveConfirmation;
