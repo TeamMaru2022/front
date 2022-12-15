@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ReserveConfirmation = (props) => {
+  // for文を動かすためのfunction
+  const runFunction = (run) => {
+    return run();
+  };
+
   return (
     <>
       <header className={`sticky z-50 top-0`}>
@@ -21,55 +26,42 @@ const ReserveConfirmation = (props) => {
         </div>
       </header>
 
-      <div className={`flex flex-col`}>
-        <div className={`flex justify-around pt-[80px] px-[50px]`}>
-          <Link className={`flex flex-col mx-auto w-[320px]`} to="../reserve">
-            <img src="./images/reserve/reserve.png" alt="reserve1" />
-            <div
-              className={`text-2xl font-bold text-[#72bfe6] text-center pt-[30px]`}
-            >
-              予約申請
-            </div>
-          </Link>
-
-          <Link className={`flex flex-col mx-auto w-[320px]`}>
-            <img src="./images/reserve/reserve_confirmation.png" alt="reserve1" />
-            <div
-              className={`text-2xl font-bold text-[#72bfe6] text-center pt-[30px]`}
-            >
-              申請確認
-            </div>
-          </Link>
-
-          <Link className={`flex flex-col mx-auto w-[320px]`}>
-            <img src="./images/reserve/change_mypage.png" alt="reserve1" />
-            <div
-              className={`text-2xl font-bold text-[#72bfe6] text-center pt-[30px]`}
-            >
-              登録内容確認
-            </div>
-          </Link>
+      <div className={`flex flex-col mx-[70px]`}>
+        <div
+          className={`flex justify-around pt-[80px] text-[30px] font-bold pb-[30px] border-b-4 border-[#7FD4FF]`}
+        >
+          申請確認
         </div>
-
-        <div className={`flex justify-around pt-14 px-[120px]`}>
-          <Link className={`flex flex-col mx-auto w-[320px]`}>
-            <img src="./images/reserve/reserve_agree.png" alt="reserve2" />
-            <div
-              className={`text-2xl font-bold text-[#FF8093] text-center pt-[30px]`}
-            >
-              予約承認
-            </div>
-          </Link>
-
-          <Link className={`flex flex-col mx-auto w-[320px]`}>
-            <img src="./images/reserve/change_timetable.png" alt="reserve2" />
-            <div
-              className={`text-2xl font-bold text-[#FF8093] text-center pt-[30px]`}
-            >
-              時間割変更
-            </div>
-          </Link>
+        <div
+          className={`flex flex-row font-bold text-2xl border-b-2 text-center py-[10px] border-gray-400`}
+        >
+          <div className={`w-1/3`}>教室</div>
+          <div className={`border-x-2 border-gray-400 w-1/3`}>日時</div>
+          <div className={`w-1/3`}>申請状況</div>
         </div>
+        <div
+          className={`flex flex-row text-2xl border-b-2 text-center border-[#7FD4FF] mt-6 h-[50px]`}
+        >
+          <div className={`w-1/3 text-3xl`}>3701</div>
+          <div className={`w-1/3`}>2022/11/22(水)11:00～13:00</div>
+          <div className={`w-1/3`}>承認待ち</div>
+        </div>
+        {runFunction(() => {
+          const items = [];
+          for (let i = 0; i < 5; i++) {
+            items.push(
+              <div
+                key={i}
+                className={`flex flex-row text-2xl border-b-2 text-center border-[#7FD4FF] mt-6 h-[50px]`}
+              >
+                <div className={`w-1/3 text-3xl`}></div>
+                <div className={`w-1/3`}></div>
+                <div className={`w-1/3`}></div>
+              </div>
+            );
+          }
+          return items;
+        })}
       </div>
     </>
   );
