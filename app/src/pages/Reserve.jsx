@@ -27,15 +27,42 @@ const Reserve = (props) => {
           <a href="/" className={`w-[150px]`}>
             <img src="./images/logo.png" alt="KitAru" className={`px-3`} />
           </a>
-          <Link className={`mx-3 px-4 pt-2`} to="../reserveTop">
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 hover:bg-[#c6ecff] transform transition`}
+            to="../reserveTop"
+          >
             予約Topページ
           </Link>
-          <Link className={`mx-3 px-4 pt-2`} to="../reserve">
+          <Link
+            className={`mx-3 px-4 pt-2 border-b-2 border-[#81d5ff]`}
+            to="../reserve"
+          >
             予約申請
           </Link>
-          {/* <Link className={`mx-3 px-4 pt-2`} to="../timetable">
-            時間割
-          </Link> */}
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 hover:bg-[#c6ecff] transform transition`}
+            to="../reserveConfirmation"
+          >
+            申請確認
+          </Link>
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 hover:bg-[#c6ecff] transform transition`}
+            to="../mypage"
+          >
+            登録内容確認
+          </Link>
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 hover:bg-[#c6ecff] transform transition`}
+            to="../reserveAgree"
+          >
+            予約承認
+          </Link>
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 hover:bg-[#c6ecff] transform transition`}
+            to="../timetable"
+          >
+            時間割更新
+          </Link>
         </div>
       </header>
 
@@ -166,9 +193,7 @@ const Reserve = (props) => {
         <div
           className={`flex flex-col border-2 m-3 mx-4 text-center bg-[#F4F5F5] w-1/3 p-2`}
         >
-          <div
-            className={`w-100% text-[#66aacc] text-2xl font-bold`}
-          >
+          <div className={`w-100% text-[#66aacc] text-2xl font-bold`}>
             ３号館
           </div>
           <div className={`flex`}>
@@ -250,29 +275,20 @@ const Reserve = (props) => {
         </div>
       </div>
       <div className={`flex justify-around pt-10`}>
-        {/* <div className={`flex place-content-center my-8 w-3/5`}> */}
-          {floor === "12" && <FirstTowerTwoFloor />}
-          {floor === "13" && <FirstTowerThreeFloor />}
-          {floor === "14" && <FirstTowerFourFloor />}
-          {floor === "22" && <SecondTowerTwoFloor />}
-          {floor === "23" && <SecondTowerThreeFloor />}
-          {floor === "24" && <SecondTowerFourFloor />}
-          {floor === "25" && <SecondTowerFiveFloor />}
-          {floor === "26" && <SecondTowerSixFloor />}
-          {floor === "32" && <ThirdTowerTwoFloor />}
-          {floor === "33" && <ThirdTowerThreeFloor />}
-          {floor === "34" && <ThirdTowerFourFloor />}
-          {floor === "35" && <ThirdTowerFiveFloor />}
-          {floor === "36" && <ThirdTowerSixFloor />}
-          {floor === "37" && <ThirdTowerSevenFloor />}
-        {/* </div>
-        <div className={`w-1/3 pr-[100px] pt-[30px]`}>
-          <img
-            src="../../images/projector.png"
-            alt="projector"
-            className={`object-contain`}
-          />
-        </div> */}
+        {floor === "12" && <FirstTowerTwoFloor />}
+        {floor === "13" && <FirstTowerThreeFloor />}
+        {floor === "14" && <FirstTowerFourFloor />}
+        {floor === "22" && <SecondTowerTwoFloor />}
+        {floor === "23" && <SecondTowerThreeFloor />}
+        {floor === "24" && <SecondTowerFourFloor />}
+        {floor === "25" && <SecondTowerFiveFloor />}
+        {floor === "26" && <SecondTowerSixFloor />}
+        {floor === "32" && <ThirdTowerTwoFloor />}
+        {floor === "33" && <ThirdTowerThreeFloor />}
+        {floor === "34" && <ThirdTowerFourFloor />}
+        {floor === "35" && <ThirdTowerFiveFloor />}
+        {floor === "36" && <ThirdTowerSixFloor />}
+        {floor === "37" && <ThirdTowerSevenFloor />}
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ReserveConfirmation = (props) => {
+const ReserveAgree = (props) => {
   // for文を動かすためのfunction
   const runFunction = (run) => {
     return run();
@@ -14,14 +14,41 @@ const ReserveConfirmation = (props) => {
           <a href="/" className={`w-[150px]`}>
             <img src="./images/logo.png" alt="KitAru" className={`px-3`} />
           </a>
-          <Link className={`mx-3 px-4 pt-2`} to="../reserveTop">
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 hover:bg-[#c6ecff] transform transition`}
+            to="../reserveTop"
+          >
             予約Topページ
           </Link>
-          <Link className={`mx-3 px-4 pt-2`} to="../reserve">
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 transform transition hover:bg-[#c6ecff]`}
+            to="../reserve"
+          >
             予約申請
           </Link>
-          <Link className={`mx-3 px-4 pt-2`} to="../timetable">
-            時間割
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 hover:bg-[#c6ecff] transform transition`}
+            to="../reserveConfirmation"
+          >
+            申請確認
+          </Link>
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 hover:bg-[#c6ecff] transform transition`}
+            to="../mypage"
+          >
+            登録内容確認
+          </Link>
+          <Link
+            className={`mx-3 px-4 pt-2 border-b-2 border-[#81d5ff]`}
+            to="../reserveAgree"
+          >
+            予約承認
+          </Link>
+          <Link
+            className={`mx-3 px-4 pt-2 rounded-lg hover:translate-y-0.5 hover:bg-[#c6ecff] transform transition`}
+            to="../timetable"
+          >
+            時間割更新
           </Link>
         </div>
       </header>
@@ -30,14 +57,7 @@ const ReserveConfirmation = (props) => {
         <div
           className={`flex justify-around pt-[80px] text-[30px] font-bold pb-[30px] border-b-4 border-[#7FD4FF]`}
         >
-          申請確認
-        </div>
-        <div
-          className={`flex flex-row font-bold text-2xl border-b-2 text-center py-[10px] border-gray-400`}
-        >
-          <div className={`w-1/3`}>教室</div>
-          <div className={`border-x-2 border-gray-400 w-1/3`}>日時</div>
-          <div className={`w-1/3`}>申請状況</div>
+          予約承認
         </div>
         <div
           className={`flex flex-row text-2xl border-b-2 text-center border-[#7FD4FF] mt-6 h-[50px]`}
@@ -67,4 +87,4 @@ const ReserveConfirmation = (props) => {
   );
 };
 
-export default ReserveConfirmation;
+export default ReserveAgree;
