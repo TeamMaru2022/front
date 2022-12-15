@@ -64,7 +64,38 @@ const ReserveAgree = (props) => {
         >
           <div className={`w-1/3 text-3xl`}>3701</div>
           <div className={`w-1/3`}>2022/11/22(水)11:00～13:00</div>
-          <div className={`w-1/3`}>承認待ち</div>
+          <div className={`w-1/3 flex flex-row justify-center`}>
+            <div className={`rounded-lg mr-[20px]`}>
+              <input
+                type="radio"
+                name="agree"
+                id="ok"
+                value="承認"
+                class="hidden peer"
+              />
+              <label
+                for="ok"
+                class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#c6ecff] bg-[#ffffff] cursor-pointer border-[#72bfe6]"
+              >
+                承認
+              </label>
+            </div>
+            <div className={`rounded-lg `}>
+              <input
+                type="radio"
+                name="agree"
+                id="ng"
+                value="拒否"
+                class="hidden peer"
+              />
+              <label
+                for="ng"
+                class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#ffc6c6] bg-[#ffffff] cursor-pointer border-[#e57272]"
+              >
+                拒否
+              </label>
+            </div>
+          </div>
         </div>
         {runFunction(() => {
           const items = [];
