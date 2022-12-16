@@ -145,6 +145,9 @@ const Com_DatePicker = (props) => {
     setRoom(props.room);
   }
 
+  // サークルかそれ以外かを判定する変数
+  const [club, SetClub] = React.useState(false);
+
   return (
     <>
       <div className={`absolute z-10 mx-[24px] mt-16 w-[300px] flex-col`}>
@@ -369,8 +372,73 @@ const Com_DatePicker = (props) => {
                   </select>
                 </div>
               </div>
+
+              {/* 使用目的 or サークル名をいれる */}
+              {club ? (
+                // サークルの場合
+                <div className={`justify-around`}>
+                  <div className={`text-base mt-2 font-semibold ml-[30px]`}>
+                    サークル名
+                  </div>
+                  <input className={`ml-[30px] border-2 border-black text-base py-0.5 px-2 rounded-lg`} type="text" placeholder="例：e-sportsサークル" />
+                </div>
+              ) : (
+                // サークル以外の場合
+                <>
+                  <div className={`text-base mt-2 font-semibold ml-[30px]`}>
+                    使用目的
+                  </div>
+                  <div className={`justify-around flex flex-row mx-[30px]`}>
+                    <div className={`w-1/3`}>
+                      <input
+                        type="radio"
+                        name="useing"
+                        id="kaigi"
+                        value="会議"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="kaigi"
+                        class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#72d2ff] bg-[#bfe9ff] cursor-pointer border-black hover:bg-[#a5e1ff]"
+                      >
+                        会議
+                      </label>
+                    </div>
+                    <div className={`w-1/3`}>
+                      <input
+                        type="radio"
+                        name="useing"
+                        id="mendan"
+                        value="面談"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="mendan"
+                        class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#72d2ff] bg-[#bfe9ff] cursor-pointer border-black hover:bg-[#a5e1ff]"
+                      >
+                        面談
+                      </label>
+                    </div>
+                    <div className={`w-1/3`}>
+                      <input
+                        type="radio"
+                        name="useing"
+                        id="sonota"
+                        value="その他"
+                        class="hidden peer"
+                      />
+                      <label
+                        for="sonota"
+                        class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#72d2ff] bg-[#bfe9ff] cursor-pointer border-black hover:bg-[#a5e1ff]"
+                      >
+                        その他
+                      </label>
+                    </div>
+                  </div>
+                </>
+              )}
               <div
-                className={`flex justify-between mt-[25px] mr-[30px] ml-[10px]`}
+                className={`flex justify-between mt-[15px] mr-[30px] ml-[10px]`}
               >
                 <div
                   className={`flex flex-row rounded-md bg-gray-200 border-[2px] border-black text-sm`}
@@ -383,6 +451,7 @@ const Com_DatePicker = (props) => {
                       id="1"
                       className="peer hidden"
                       defaultChecked
+                      onChange={() => SetClub(false)}
                     />
                     <label
                       htmlFor="1"
@@ -398,6 +467,7 @@ const Com_DatePicker = (props) => {
                       name="option"
                       id="2"
                       className={`peer hidden`}
+                      onChange={() => SetClub(true)}
                     />
                     <label
                       htmlFor="2"

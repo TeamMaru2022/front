@@ -163,7 +163,7 @@ const FirstTowerThreeFloor = () => {
           <div className={`pb-3`}>
             <img
               className={`w-[90px] ml-[90px]`}
-              src="./images/FirstTower_stairs.png"
+              src="./images/school_buildings/FirstTower_stairs.png"
               alt="階段"
             />
           </div>

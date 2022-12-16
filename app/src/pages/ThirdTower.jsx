@@ -86,7 +86,7 @@ const ThirdTower = () => {
             <div
               className={`w-[400px] h-[557px] mt-[30px] h-auto relative flex place-items-end justify-center`}
             >
-              <img src="./images/ThirdTower_bg.png" alt="3号館" />
+              <img src="./images/school_buildings/ThirdTower_bg.png" alt="3号館" />
               <div className={`absolute w-5/6 mb-[180px]`}>
                 {/* 7階 */}
                 <div

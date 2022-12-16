@@ -81,7 +81,7 @@ const FirstTower = () => {
               className={`w-[510px] h-[505px] mt-[30px] relative flex place-items-end justify-center`}
             >
               <img
-                src="./images/FirstTower_bg.png"
+                src="./images/school_buildings/FirstTower_bg.png"
                 alt="1号館"
                 className={``}
               />

@@ -207,7 +207,7 @@ const TopPage = () => {
             >
               <Link to="first" className={`h-30% w-33% mx-5`}>
                 <div className={`flex-col`}>
-                  <img src="./images/FirstTower.png" alt="1号館" />
+                  <img src="./images/school_buildings/FirstTower.png" alt="1号館" />
                   <div className={`text-center ${max1300 ? `my-2` : `mt-10`}`}>
                     1号館
                   </div>
@@ -215,7 +215,7 @@ const TopPage = () => {
               </Link>
               <Link to="second" className={`h-30% mx-5`}>
                 <div className={`flex-col`}>
-                  <img src="./images/SecondTower.png" alt="2号館" />
+                  <img src="./images/school_buildings/SecondTower.png" alt="2号館" />
                   <div className={`text-center ${max1300 ? `my-2` : `mt-10`}`}>
                     2号館
                   </div>
@@ -223,7 +223,7 @@ const TopPage = () => {
               </Link>
               <Link to="third" className={`h-30% mx-5`}>
                 <div className={`flex-col`}>
-                  <img src="./images/ThirdTower.png" alt="3号館" className="" />
+                  <img src="./images/school_buildings/ThirdTower.png" alt="3号館" className="" />
                   <div className={`text-center ${max1300 ? `my-2` : `mt-10`}`}>
                     3号館
                   </div>
@@ -264,7 +264,7 @@ const TopPage = () => {
                     max750 ? `w-1/2 p-2` : `w-[300px] p-4`
                   }`}
                 >
-                  <img src="./images/1206.png" alt="1号館" />
+                  <img src="./images/setubi/1206.png" alt="1号館" />
                   <div className={`text-center`}>1206 1309</div>
                 </div>
 
@@ -273,7 +273,7 @@ const TopPage = () => {
                     max750 ? `w-1/2 p-2` : `w-[300px] p-4`
                   }`}
                 >
-                  <img src="./images/1301.png" alt="1号館" />
+                  <img src="./images/setubi/1301.png" alt="1号館" />
                   <div className={`text-center`}>1301 1302</div>
                   <div className={`text-center`}>1303 1304</div>
                 </div>
@@ -282,7 +282,7 @@ const TopPage = () => {
                     max750 ? `w-1/2 p-2` : `w-[300px] p-4`
                   }`}
                 >
-                  <img src="./images/1305.png" alt="1号館" />
+                  <img src="./images/setubi/1305.png" alt="1号館" />
                   <div className={`text-center`}>1305 1306</div>
                   <div className={`text-center`}>1307 1308</div>
                 </div>
@@ -297,7 +297,7 @@ const TopPage = () => {
                     max750 ? `w-1/2 p-2` : `w-[300px] p-4`
                   }`}
                 >
-                  <img src="./images/1206.png" alt="1号館" />
+                  <img src="./images/setubi/1206.png" alt="1号館" />
                   <div className={`text-center`}>1206 1309</div>
                 </div>
               </div>

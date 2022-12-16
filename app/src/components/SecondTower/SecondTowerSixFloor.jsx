@@ -50,7 +50,7 @@ const SecondTowerSixFloor = () => {
             <div className={`w-[40px] h-[252px]`}>
               <img
                 className={`h-[103px] mt-0.5`}
-                src="./images/SecondTower_stairs.png"
+                src="./images/school_buildings/SecondTower_stairs.png"
                 alt="階段"
               />
             </div>
