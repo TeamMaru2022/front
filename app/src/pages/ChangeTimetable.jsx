@@ -9,13 +9,7 @@ const ChangeTimetable = () => {
     console.log("変更");
     console.log(e.target.files[0]["name"]);
     console.log(e.target.files.length);
-    for (let i = 0; i < e.target.files.length; i++) {
-      console.log(e.target.files[i]);
-      SetMsg((msg) => [...msg, e.target.files[i]["name"]]);
-      formData.append("timetable", e.target.files[i]);
-    }
-    // console.log(msg);
-    // formData.append("timetable", e.target.files[0]);
+    formData.append("timetable", e.target.files[0]);
   };
 
   const TimetableChange = () => {

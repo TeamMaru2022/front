@@ -92,10 +92,8 @@ const Com_DatePicker = (props) => {
   // 申請結果ダイアログ
   const [result, setResult] = React.useState(false);
 
-  // postしたときにデータを入れるための変数
-  const [message, setMessage] = React.useState();
   // 予約データをサーバに送る処理
-  const resulthandleChange = (flg) => {
+  const resulthandleChange = async (flg) => {
     let url = "http://localhost:4000/reservation/rese";
 
     // postで送るデータ
@@ -112,27 +110,28 @@ const Com_DatePicker = (props) => {
       }),
     };
     // postで帰ってきたデータをsetMessageでmessageに入れてる
-    fetch(url, param)
+    const reseresult = await fetch(url, param)
       .then((response) => response.json())
-      .then((data) => setMessage(data));
-    return message;
+      .then((data) => {
+        return data;
+      });
+    return reseresult;
   };
 
   // "はい(申請する)"ボタンを押した時
   // back-endにpost送信
-  const postReservation = () => {
+  const postReservation = async () => {
     // messageが0：時間にかぶりがある
     // messageが1：予約完了
-    const message = resulthandleChange();
-    if (message["message"] === "1") {
+    const reseresult = await resulthandleChange();
+    console.log(reseresult);
+    if (reseresult["message"] === "1") {
       setMsg("下記の内容で受け付けました。");
-    } else if (message["message"] === "0") {
+    } else if (reseresult["message"] === "0") {
       setMsg("下記の時間に予約が入っています。");
-      setShowStart(message["startTime"].slice(0, 5));
-      setShowEnd(message["endTime"].slice(0, 5));
+      setShowStart(reseresult["startTime"].slice(0, 5));
+      setShowEnd(reseresult["endTime"].slice(0, 5));
     }
-    console.log(message);
-
     setResult(true);
   };
 
@@ -380,7 +379,11 @@ const Com_DatePicker = (props) => {
                   <div className={`text-base mt-2 font-semibold ml-[30px]`}>
                     サークル名
                   </div>
-                  <input className={`ml-[30px] border-2 border-black text-base py-0.5 px-2 rounded-lg`} type="text" placeholder="例：e-sportsサークル" />
+                  <input
+                    className={`ml-[30px] border-2 border-black text-base py-0.5 px-2 rounded-lg`}
+                    type="text"
+                    placeholder="例：e-sportsサークル"
+                  />
                 </div>
               ) : (
                 // サークル以外の場合
@@ -395,11 +398,11 @@ const Com_DatePicker = (props) => {
                         name="useing"
                         id="kaigi"
                         value="会議"
-                        class="hidden peer"
+                        className="hidden peer"
                       />
                       <label
-                        for="kaigi"
-                        class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#72d2ff] bg-[#bfe9ff] cursor-pointer border-black hover:bg-[#a5e1ff]"
+                        htmlFor="kaigi"
+                        className="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#72d2ff] bg-[#bfe9ff] cursor-pointer border-black hover:bg-[#a5e1ff]"
                       >
                         会議
                       </label>
@@ -410,11 +413,11 @@ const Com_DatePicker = (props) => {
                         name="useing"
                         id="mendan"
                         value="面談"
-                        class="hidden peer"
+                        className="hidden peer"
                       />
                       <label
-                        for="mendan"
-                        class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#72d2ff] bg-[#bfe9ff] cursor-pointer border-black hover:bg-[#a5e1ff]"
+                        htmlFor="mendan"
+                        className="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#72d2ff] bg-[#bfe9ff] cursor-pointer border-black hover:bg-[#a5e1ff]"
                       >
                         面談
                       </label>
@@ -425,11 +428,11 @@ const Com_DatePicker = (props) => {
                         name="useing"
                         id="sonota"
                         value="その他"
-                        class="hidden peer"
+                        className="hidden peer"
                       />
                       <label
-                        for="sonota"
-                        class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#72d2ff] bg-[#bfe9ff] cursor-pointer border-black hover:bg-[#a5e1ff]"
+                        htmlFor="sonota"
+                        className="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#72d2ff] bg-[#bfe9ff] cursor-pointer border-black hover:bg-[#a5e1ff]"
                       >
                         その他
                       </label>

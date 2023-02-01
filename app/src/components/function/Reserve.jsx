@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const Reserve = (props) => {
   const [reserve, setReserve] = useState([]);
-  let url = "http://localhost:4000/reservation/rese/" + props.tower;
+  let url = "http://localhost:4000/reservation/rese/tower/" + props.tower;
 
   // urlが変更されるたびにuseEffectの中の処理をする
   useEffect(() => {
