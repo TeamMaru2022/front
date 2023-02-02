@@ -74,7 +74,7 @@ const ReserveAgree = (props) => {
                 class="hidden peer"
               />
               <label
-                for="ok"
+                htmlFor="ok"
                 class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#c6ecff] bg-[#ffffff] cursor-pointer border-[#72bfe6]"
               >
                 承認
@@ -89,7 +89,7 @@ const ReserveAgree = (props) => {
                 class="hidden peer"
               />
               <label
-                for="ng"
+                htmlFor="ng"
                 class="border-2 text-sm rounded-2xl px-4 py-1 peer-checked:bg-[#ffc6c6] bg-[#ffffff] cursor-pointer border-[#e57272]"
               >
                 拒否
